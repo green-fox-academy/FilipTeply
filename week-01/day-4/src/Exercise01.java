@@ -1,13 +1,6 @@
 public class Exercise01 {
-
     public static void main(String[] args) {
-
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Looping" + i + "th turn");
-        }
-
+        // Modify this program to greet you instead of the World!
+        System.out.println("Hello, Filip!");
     }
-        System.out.println("End of Loop");
-    }
-
 }

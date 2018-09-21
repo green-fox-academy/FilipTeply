@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc07f57-f1d0-4d1b-a4ea-1517f9ed232c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise29DrawApyramid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise35.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Exercise00.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise16AnimalsAndLegs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise30DrawADiamond.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-4/src/CognitiveAprenticeship1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day-4/src/CognitiveAprenticeship1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/day-5.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,22 +24,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="3" />
+          <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="673" />
+          <entry key="java" value="1140" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="673" />
+          <entry key="JAVA" value="1140" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -67,13 +62,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Exercise29DrawApyramid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="168">
+              <caret line="22" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
               <folding>
                 <element signature="e#0#668#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Exercise30DrawADiamond.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#333#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Exercise16AnimalsAndLegs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+              <folding>
+                <element signature="e#0#425#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,6 +115,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/Exercise35.java" />
         <option value="$PROJECT_DIR$/src/Exercise29DrawApyramid.java" />
+        <option value="$PROJECT_DIR$/src/Exercise30DrawADiamond.java" />
+        <option value="$PROJECT_DIR$/src/Exercise16AnimalsAndLegs.java" />
       </list>
     </option>
   </component>
@@ -140,7 +161,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537532322658" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537537566904" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -154,9 +175,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Exercise29DrawApyramid">
+  <component name="RunManager" selected="Application.Exercise16AnimalsAndLegs">
+    <configuration name="Exercise16AnimalsAndLegs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise16AnimalsAndLegs" />
+      <module name="day-5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Exercise29DrawApyramid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise29DrawApyramid" />
+      <module name="day-5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise30DrawADiamond" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise30DrawADiamond" />
       <module name="day-5" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,9 +218,13 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Exercise35" />
       <item itemvalue="Application.Exercise29DrawApyramid" />
+      <item itemvalue="Application.Exercise30DrawADiamond" />
+      <item itemvalue="Application.Exercise16AnimalsAndLegs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exercise16AnimalsAndLegs" />
+        <item itemvalue="Application.Exercise30DrawADiamond" />
         <item itemvalue="Application.Exercise29DrawApyramid" />
         <item itemvalue="Application.Exercise35" />
       </list>
@@ -201,16 +240,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537522053925</updated>
-      <workItem from="1537522059338" duration="6161000" />
+      <workItem from="1537522059338" duration="11389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6161000" />
+    <option name="totallyTimeSpent" value="11389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -226,7 +264,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4609929" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3035461" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -275,10 +313,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Exercise29DrawApyramid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state relative-caret-position="168">
+          <caret line="22" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
           <folding>
             <element signature="e#0#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exercise30DrawADiamond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exercise16AnimalsAndLegs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#425#0" expanded="true" />
           </folding>
         </state>
       </provider>

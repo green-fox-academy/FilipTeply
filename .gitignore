@@ -1,0 +1,8 @@
+.idea
+out
+*.xml
+*.iml
+*.class
+
+# If I have a mac
+.DS_Store

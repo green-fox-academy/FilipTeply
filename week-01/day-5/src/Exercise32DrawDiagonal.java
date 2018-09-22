@@ -31,7 +31,7 @@ public class Exercise32DrawDiagonal {
 //2nd line starts here
 
 
-//2nd loop prints: %...%...%
+//2nd loop prints: %...%...% (for internal lines only, i.e. from lineNo 2 to lineNo < dim)
 // initial % for (int n = lineNo; n < dim; n++)
         for (int n = lineNo; n < (dim); n++) {
             System.out.print("%");
@@ -49,18 +49,15 @@ public class Exercise32DrawDiagonal {
             for (int p = 0; p < dim - lineNo-1; p++) {
                 System.out.print(" ");
             }
-            //2.2th loop
+            //2.2th loop fin
 
-            //prints final % and linebreak on an internal line
+            //prints final % and linebreak on each internal line
 
                 System.out.println("%");
                 lineNo++;
 
         }
-//2nd loop finished
-
-
-
+//2nd loop finished (i.e. all internal lines printed)
 
 
 
@@ -71,7 +68,7 @@ public class Exercise32DrawDiagonal {
                 System.out.print("%");
             }
         }
-//followed by linebreak
+//followed by a linebreak
         System.out.println(" ");
 
 

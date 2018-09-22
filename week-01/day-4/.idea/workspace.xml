@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85152cf0-6c61-432b-bb0e-3c7222cf9fa7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../day-5/src/Exercise17AverageOfInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day-5/src/Exercise20PrintBigger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day-5/src/Exercise22.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../day-5/src/Exercise31DrawSquare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise34ParametricAverage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day-5/src/Exercise32DrawDiagonal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../day-5/src/Exercise31DrawSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day-5/src/Exercise31DrawSquare.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,35 +19,36 @@
     <session id="430820364">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="11" />
-          <entry key="java" value="4520" />
+          <entry key="dummy" value="18" />
+          <entry key="java" value="5268" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4520" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="JAVA" value="5268" />
+          <entry key="PLAIN_TEXT" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="34" />
+          <entry key="java" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="34" />
+          <entry key="JAVA" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -59,24 +59,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Exercise14.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Exercise15.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Exercise23.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -117,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/src/Exerxise27.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
-              <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -134,8 +116,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Exercise33.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="-221">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Exercise34ParametricAverage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#279#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,7 +138,7 @@
         <entry file="file://$PROJECT_DIR$/src/CognitiveAprenticeship1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -197,8 +191,10 @@
         <option value="$PROJECT_DIR$/src/Exerxise27.java" />
         <option value="$PROJECT_DIR$/src/Exercise28.java" />
         <option value="$PROJECT_DIR$/src/Exercise29.java" />
-        <option value="$PROJECT_DIR$/src/Exercise33.java" />
         <option value="$PROJECT_DIR$/src/CognitiveAprenticeship1.java" />
+        <option value="$PROJECT_DIR$/src/Exercise33.java" />
+        <option value="$PROJECT_DIR$/src/Exercise34ParametricAverage.java" />
+        <option value="$PROJECT_DIR$/src/Exercise32DrawDiagonal.java" />
       </list>
     </option>
   </component>
@@ -222,6 +218,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -239,14 +236,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537544407420" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../day-5" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537604653959" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../day-5/src" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -265,7 +261,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Exerxise27">
+  <component name="RunManager" selected="Application.Exercise32DrawDiagonal">
     <configuration name="CognitiveAprenticeship1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CognitiveAprenticeship1" />
       <module name="day-4" />
@@ -273,15 +269,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercise28" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise28" />
-      <module name="day-4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercise29" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise29" />
+    <configuration name="Exercise32DrawDiagonal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise32DrawDiagonal" />
       <module name="day-4" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -289,6 +278,13 @@
     </configuration>
     <configuration name="Exercise33" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise33" />
+      <module name="day-4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise34ParametricAverage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise34ParametricAverage" />
       <module name="day-4" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -320,19 +316,19 @@
     <list>
       <item itemvalue="Application.MainExample" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Exercise28" />
-      <item itemvalue="Application.Exercise29" />
       <item itemvalue="Application.Exercise33" />
       <item itemvalue="Application.CognitiveAprenticeship1" />
       <item itemvalue="Application.Exerxise27" />
+      <item itemvalue="Application.Exercise34ParametricAverage" />
+      <item itemvalue="Application.Exercise32DrawDiagonal" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exercise32DrawDiagonal" />
+        <item itemvalue="Application.Exercise34ParametricAverage" />
         <item itemvalue="Application.Exerxise27" />
         <item itemvalue="Application.CognitiveAprenticeship1" />
         <item itemvalue="Application.Exercise33" />
-        <item itemvalue="Application.Exercise29" />
-        <item itemvalue="Application.Exercise28" />
       </list>
     </recent_temporary>
   </component>
@@ -351,17 +347,17 @@
       <workItem from="1537512800502" duration="3131000" />
       <workItem from="1537519917350" duration="1886000" />
       <workItem from="1537521973760" duration="2243000" />
+      <workItem from="1537592202811" duration="5311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43706000" />
+    <option name="totallyTimeSpent" value="49017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16040269" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1624161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -370,7 +366,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35177305" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35177305" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -582,6 +578,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exerxise27.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Exercise28.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -592,21 +595,31 @@
     <entry file="file://$PROJECT_DIR$/src/CognitiveAprenticeship1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Exerxise27.java">
+    <entry file="file://$PROJECT_DIR$/src/Exercise32DrawDiagonal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state>
+          <caret column="6" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exercise34ParametricAverage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#279#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Exercise33.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="-221">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

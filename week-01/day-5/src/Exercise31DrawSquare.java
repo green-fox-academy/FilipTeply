@@ -40,5 +40,8 @@ public class Exercise31DrawSquare {
         for (int i = 0; i < dim; i++) {
             System.out.print("%");
         }
+
+
+
     }
 }

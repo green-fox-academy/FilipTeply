@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc07f57-f1d0-4d1b-a4ea-1517f9ed232c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/ArraysExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/CompareLength.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/IncrementElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/PrintElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/SumElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Third.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/AppendA_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Colors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/DiagonalMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/DoubleItems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/ReverseList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/SumAllElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/SwapElements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../week-02/day-1/src/PrintArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-1/src/PrintArguments.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

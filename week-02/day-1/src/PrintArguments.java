@@ -16,23 +16,20 @@ public class PrintArguments {
 
     public static void main(String[] args) {
 
-        String[] words = {"first", "second", "third", "fourth"};
+        String[] words = {"first", "second", "third"};
 
         System.out.println(words.length);
-        System.out.println(printParams(words));
+        printParams(words);
 
             }
 
-    public static String printParams(String[] params){
+    public static void printParams(String[] params){
 
 
         for (int i = 0; i < params.length; i++) {
 
             System.out.print(params[i] + " ");
         }
-
-        return " ";
-
 
     }
 

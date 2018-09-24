@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc07f57-f1d0-4d1b-a4ea-1517f9ed232c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/test3OracleArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/test3returnRandomNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/AppendA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Doubling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Exercise0.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Factorial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/GreeterFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/MaterialReview1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Summing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../week-02/day-1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,9 +25,10 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -152,6 +156,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -163,8 +169,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,16 +255,18 @@
       <workItem from="1537522059338" duration="19187000" />
       <workItem from="1537598959188" duration="15820000" />
       <workItem from="1537717976138" duration="1250000" />
+      <workItem from="1537772756576" duration="596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36257000" />
+    <option name="totallyTimeSpent" value="36853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30268458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3067114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -303,9 +309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-147">
           <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#196#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -343,10 +346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-          <folding>
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

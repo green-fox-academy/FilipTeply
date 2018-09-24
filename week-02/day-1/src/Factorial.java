@@ -8,9 +8,9 @@ public class Factorial {
 
     public static void main(String[] args) {
 
-        int number = 3;
+        int number = 4;
 
-        System.out.println(factorio(number));
+        System.out.println("Factorial of " + number + " is: " + factorio(number));
 
     }
 

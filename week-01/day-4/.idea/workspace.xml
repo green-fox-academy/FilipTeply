@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85152cf0-6c61-432b-bb0e-3c7222cf9fa7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/AppendA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Doubling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Exercise0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Factorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/GreeterFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/MaterialReview1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Summing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/PrintArguments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day-5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week-02/day-1/src/Factorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Factorial.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afc07f57-f1d0-4d1b-a4ea-1517f9ed232c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/AppendA_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/Colors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/DiagonalMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/DoubleItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/ReverseList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/SumAllElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../week-02/day-1/src/SwapElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-2/src/SimpleReplace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-2/src/TakesLonger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-2/src/ToDoPrint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-2/src/UrlFixer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week-02/day-2/src/test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -23,12 +21,13 @@
     <session id="234306860">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -98,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Exercise30DrawDiamondVersion2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="588">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,7 +156,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -169,13 +167,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537617662643" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../week-02/day-1/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../week-02/day-02" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -256,17 +255,18 @@
       <workItem from="1537598959188" duration="15820000" />
       <workItem from="1537717976138" duration="1250000" />
       <workItem from="1537772756576" duration="596000" />
+      <workItem from="1537857786723" duration="2053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36853000" />
+    <option name="totallyTimeSpent" value="38906000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3067114" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31140938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -275,7 +275,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.7219858" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7219858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -379,8 +379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Exercise30DrawDiamondVersion2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="588">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

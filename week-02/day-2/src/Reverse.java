@@ -21,7 +21,11 @@ public class Reverse {
 
         for (int i = 0; i < a.length(); i++) {
 
-            rev = rev.concat("" + a.charAt(a.length() - i -1));
+
+            rev += a.charAt(a.length() - i -1);
+            //alternative version is:
+            //rev = rev.concat("" + a.charAt(a.length() - i -1));
+
 
         }
         return rev;
@@ -30,6 +34,9 @@ public class Reverse {
 
 
 }
+
+//rev += 's';
+
 
 //    String s1="hello";
 //    char[] ch=s1.toCharArray();

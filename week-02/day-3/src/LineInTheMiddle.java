@@ -4,13 +4,15 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Test1 {
+public class LineInTheMiddle {
     public static void mainDraw(Graphics graphics){
-        int xpoints[] = {25, 145, 25, 145, 25};
-        int ypoints[] = {25, 25, 145, 160, 100};
-        int npoints = 5;
-        graphics.setColor(new Color(255,0,0));
-        graphics.drawPolygon(xpoints, ypoints, npoints);
+        // draw a red horizontal line to the canvas' middle.
+        graphics.setColor(Color.RED);
+        graphics.drawLine(0, HEIGHT/2, WIDTH, HEIGHT/2);
+
+        // draw a green vertical line to the canvas' middle.
+        graphics.setColor(Color.GREEN);
+        graphics.drawLine(WIDTH/2, 0, WIDTH/2, HEIGHT);
 
     }
 
@@ -20,11 +22,14 @@ public class Test1 {
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
-        jFrame.setSize(new Dimension(WIDTH, HEIGHT));
+
         jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        jFrame.add(new ImagePanel());
+        ImagePanel panel = new ImagePanel();
+        panel.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        jFrame.add(panel);
         jFrame.setLocationRelativeTo(null);
         jFrame.setVisible(true);
+        jFrame.pack();
     }
 
     static class ImagePanel extends JPanel {

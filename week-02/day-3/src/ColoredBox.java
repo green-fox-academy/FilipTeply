@@ -4,13 +4,20 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Test1 {
-    public static void mainDraw(Graphics graphics){
-        int xpoints[] = {25, 145, 25, 145, 25};
-        int ypoints[] = {25, 25, 145, 160, 100};
-        int npoints = 5;
-        graphics.setColor(new Color(255,0,0));
-        graphics.drawPolygon(xpoints, ypoints, npoints);
+public class ColoredBox {
+    public static void mainDraw(Graphics graphics) {
+        // Draw a box that has different colored lines on each edge.
+        graphics.setColor(new Color(255,40,10));
+        graphics.drawLine(50, 20, 150, 20);
+
+        graphics.setColor(new Color(0,40,255));
+        graphics.drawLine(150, 20, 150, 120);
+
+        graphics.setColor(new Color(0,255,0));
+        graphics.drawLine(150, 120, 50, 120);
+
+        graphics.setColor(new Color(0,0,0));
+        graphics.drawLine(50, 120, 50, 20);
 
     }
 

@@ -23,21 +23,24 @@ public class ConnectTheDots {
 
 
     public static void connectDotsFunction(Graphics gra, int[][] a){
-        gra.setColor(Color.GREEN);
-        int x1 = 0;
-        int x2 = 0;
-        int y1 = 0;
-        int y2 = 0;
+        gra.setColor(Color.BLACK);
+        int x1;
+        int x2;
+        int y1;
+        int y2;
 
-        for (int i = 0; i < ; i++) {
+        for (int i = 0; i < a.length-1; i++) {
 
-            
+                x1 = a[i][0];
+                y1 = a[i][1];
 
-
+                x2 = a[i + 1][0];
+                y2 = a[i + 1][1];
+                gra.drawLine(x1, y1, x2, y2);
 
         }
 
-        gra.drawLine(x1,y1,x2,y2);
+
 
     }
 

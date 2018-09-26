@@ -10,6 +10,7 @@ public class QuoteSwap{
         // Your task is to fix it by swapping the right words with code
         // Create a method called quoteSwap().
 
+        System.out.println(list);
         // Also, print the sentence to the output with spaces in between.
         System.out.println(quoteSwap(list));
         // Expected output: "What I cannot create I do not understand."
@@ -17,6 +18,9 @@ public class QuoteSwap{
     }
 
     public static ArrayList<String> quoteSwap(ArrayList<String>) {
+
+        String prov = get()
+
 
     }
 

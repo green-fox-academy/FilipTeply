@@ -4,12 +4,12 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class PurpleSteps {
+public class PurpleSteps3dver2 {
     public static void mainDraw(Graphics graphics) {
         // Reproduce this:
-        // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
+        // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps-3d/r4.png]
 
-drawSteps(graphics, 30);
+        drawSteps(graphics, 2);
 
     }
 
@@ -18,13 +18,26 @@ drawSteps(graphics, 30);
         for (int i = 0; i < 50; i++) {
 
             gra.setColor(new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256)));
-            gra.fillRect(0+sumOfi*size, 0+ sumOfi*size, i*size, i*size);
+            gra.fillRect(sumOfi*size, sumOfi*size, i*size, i*size);
             gra.setColor(Color.BLACK);
-            gra.drawRect(0+sumOfi*size, 0+ sumOfi*size, i*size, i*size);
+            gra.drawRect(sumOfi*size, sumOfi*size, i*size, i*size);
             sumOfi+=i;
         }
 
     }
+
+
+
+//    public static void drawSteps(Graphics gra, int size) {
+//
+//        for (int i = 0; i < 50; i++) {
+//
+//            gra.setColor(new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256)));
+//            gra.fillRect(i * 2 * size, i * 2 * size, i * (2i) * size, i * 2 * size);
+//            gra.setColor(Color.BLACK);
+//            gra.drawRect(i * 2 * size, i * 2 * size, i * 2 * size, i * 2 * size);
+//        }
+//    }
 
 
     // Don't touch the code below

@@ -12,7 +12,7 @@ public class RainbowBoxFunction {
         // and draws a square of that size and color to the center of the canvas.
         // Create a loop that fills the canvas with rainbow colored squares.
 
-drawRainbowSquare(graphics, 50);
+drawRainbowSquare(graphics, 100);
 
     }
 
@@ -32,7 +32,10 @@ drawRainbowSquare(graphics, 50);
         }
 
 
-    }
+
+
+
+
 
 
     // Don't touch the code below

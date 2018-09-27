@@ -8,16 +8,26 @@ public class LinePlay {
     public static void mainDraw(Graphics graphics) {
 
 
-        int increment = 32;
-        paraboleBottomLeft(graphics, increment);
+        int increment = 10;
+        int increment2 = 10;
 
+        paraboleBottomLeft(graphics, increment);
+        paraboleTopRight(graphics, increment2);
     }
 
     public static void paraboleBottomLeft(Graphics gra, int increment) {
 
         for (int i = 0; i < (320 / increment); i++) {
-            gra.setColor(new Color(27,255, 20));
+            gra.setColor(new Color(27, 255, 20));
             gra.drawLine(0, i * increment, i * increment, 320);
+        }
+    }
+
+    public static void paraboleTopRight(Graphics gra, int increment) {
+
+        for (int i = 0; i < (320 / increment); i++) {
+            gra.setColor(new Color(255, 0, 0));
+            gra.drawLine(i * increment, 0, 320, i * increment);
         }
     }
 

@@ -13,8 +13,13 @@ public class TrianglesUsingLines {
         // s = side length of an equilateral triangle
         int x = 100;
         int y = 0;
+        //number of repetitions
+        int rep = 10;
+
         // position of the top vertex of the top triangle x, y
-        drawHorizontals(graphics, s);
+        drawHorizontals(graphics, s, rep);
+        drawDescendingLines(graphics, s, rep);
+
         
 
 
@@ -22,20 +27,22 @@ public class TrianglesUsingLines {
         //graphics.drawLine(0,0, (int)(s*Math.sqrt((3.0/4))), (int)(s*Math.sqrt(3.0/4)));
     }
 
-    public static void drawHorizontals(Graphics gra, double s) {
+    public static void drawHorizontals(Graphics gra, double s, int rep) {
 // position of the top vertex of the top triangle x, y
         int ofsx = 100;
         int ofsy = 10;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < rep; i++) {
 
             gra.drawLine(ofsx - i*(int)(s/2), ofsy + i*(int)(Math.sqrt(3.0/4)*s),ofsx + i*(int)(s/2), ofsy + i*(int)(Math.sqrt(3.0/4)*s));
-
         }
-
-
     }
 
+    public static void drawDescendingLines(Graphics gra, double s, int rep){
+        int ofsx = 100;
+        int ofsy = 10;
+        gra.drawLine(ofsx - i*(int)(s/2), ofsy + i*(int)(Math.sqrt(3.0/4)*s), );
+    }
 
 
     // Don't touch the code below

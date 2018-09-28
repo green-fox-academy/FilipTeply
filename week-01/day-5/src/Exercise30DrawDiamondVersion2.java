@@ -4,13 +4,11 @@
 // lineNo count down (lineNo--) goes from height/2 to -height/2 (i.e. 2, 1, 0, -1, -2)
 // number of spaces printed on each line before the asterisks = absolute value of lineNo (Math.abs(), ie 2, 1, 0, 1, 2)
 // number of asterisks on each line: (height - (Math.abs(lineNo))*2)
-// absolute value of lineNo
-
 
 import java.util.Scanner;
 import java.lang.*;
-import static java.lang.Math.abs;
 
+import static java.lang.Math.abs;
 
 public class Exercise30DrawDiamondVersion2 {
 
@@ -20,32 +18,22 @@ public class Exercise30DrawDiamondVersion2 {
         System.out.println("Give me height of your diamond.");
         int height = scanner.nextInt();
 
-        int lineNo= height/2;
+        int lineNo = height / 2;
 
 
-//1st loop: loops height times
-for (int n = 0; n < height; n++ ) {
+        for (int n = 0; n < height; n++) {
 
-    //1.1 loop prints i spaces i from 0 to absolute value of lineNo
-    for (int i = 0; i < Math.abs(lineNo); i++) {
-        System.out.print(" ");
-    }
-    //1.1 loop fin
+            for (int i = 0; i < Math.abs(lineNo); i++) {
+                System.out.print(" ");
+            }
 
+            for (int i = 0; i < (height - (Math.abs(lineNo)) * 2); i++) {
+                System.out.print("*");
+            }
 
-    //1.2 loop prints asterisks
-    for (int i = 0; i < (height - (Math.abs(lineNo))*2); i++) {
-        System.out.print("*");
-    }
-    //1.2 loop fin
-
-    // lineNo x finishes
-    System.out.println(" ");
-    lineNo--;
-
-  }
-//1st loop fin
-
+            System.out.println(" ");
+            lineNo--;
+        }
 
 
     }

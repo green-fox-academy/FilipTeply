@@ -8,7 +8,7 @@ public class LinePlay {
     public static void mainDraw(Graphics graphics) {
 
 
-        int increment = 10;
+        int increment = 70;
         int increment2 = 10;
 
         paraboleBottomLeft(graphics, increment);
@@ -18,7 +18,7 @@ public class LinePlay {
     public static void paraboleBottomLeft(Graphics gra, int increment) {
 
         for (int i = 0; i < (320 / increment); i++) {
-            gra.setColor(new Color(27, 255, 20));
+            gra.setColor(new Color(27, 0, 220));
             gra.drawLine(0, i * increment, i * increment, 320);
         }
     }

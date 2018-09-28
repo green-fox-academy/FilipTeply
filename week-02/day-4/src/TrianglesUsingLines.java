@@ -9,48 +9,47 @@ public class TrianglesUsingLines {
     public static void mainDraw(Graphics graphics) {
 
 
-        double s = 20.0;
+        double s = 25.0;
         // s = side length of an equilateral triangle (the smallest triangle element)
-        int x = 100;
-        int y = 0;
-        // position of the top vertex of the top triangle x, y
+        int ofsx = 800;
+        int ofsy = 40;
+        // position of the top vertex of the top triangle ofsx, ofsy
 
-        int rep = 10;
+        int rep = 40;
         //number of repetitions (=number of the smallest triangle in one side of the biggest triangle)
 
-        drawHorizontals(graphics, s, rep);
-        drawDescendingLines(graphics, s, rep);
-        drawAscendingLines(graphics, s, rep);
+        drawHorizontals(graphics, s, rep, ofsx, ofsy);
+        drawDescendingLines(graphics, s, rep, ofsx, ofsy);
+        drawAscendingLines(graphics, s, rep, ofsx, ofsy);
 
 
 
     }
 
-    public static void drawHorizontals(Graphics gra, double s, int rep) {
+    public static void drawHorizontals(Graphics gra, double s, int rep, int ofsx, int ofsy) {
 // position of the top vertex of the top triangle x, y
-        int ofsx = 100;
-        int ofsy = 10;
 
-        for (int i = 0; i < rep; i++) {
+
+        for (int i = 0; i < rep+1; i++) {
+
+
 
             gra.drawLine(ofsx - (int) (i*s / 2), ofsy + (int) (i*Math.sqrt(3.0 / 4) * s), ofsx + (int) (i*s / 2), ofsy + (int) (i*Math.sqrt(3.0 / 4) * s));
         }
     }
 
-    public static void drawDescendingLines(Graphics gra, double s, int rep) {
-        int ofsx = 100;
-        int ofsy = 10;
+    public static void drawDescendingLines(Graphics gra, double s, int rep, int ofsx, int ofsy) {
 
-        for (int i = 0; i < rep; i++) {
+
+        for (int i = 0; i < rep+1; i++) {
             gra.drawLine(ofsx -  (int) (i*s / 2), ofsy + (int) (i*Math.sqrt(3.0 / 4) * s), ofsx + (int) (rep*s / 2) - (int) (i * s), ofsy + (int) (rep*Math.sqrt(3.0 / 4) * s));
         }
     }
 
-    public static void drawAscendingLines(Graphics gra, double s, int rep){
-        int ofsx = 100;
-        int ofsy = 10;
-        for (int i = 0; i < rep; i++) {
-            gra.drawLine(ofsx + rep * (int) (s / 2) - (int) (i * s), ofsy + rep * (int) (Math.sqrt(3.0 / 4) * s), ofsx +(int)(rep*s/2)-i * (int) (s / 2), ofsy + rep*(int) (Math.sqrt(3.0 / 4) * s)- i * (int) (Math.sqrt(3.0 / 4) * s));
+    public static void drawAscendingLines(Graphics gra, double s, int rep, int ofsx, int ofsy){
+
+        for (int i = 0; i < rep+1; i++) {
+            gra.drawLine(ofsx + (int) (rep * s / 2) - (int) (i * s), ofsy + (int) ( rep *Math.sqrt(3.0 / 4) * s), ofsx +(int)(rep*s/2)-(int) (i*s / 2), ofsy + (int) (rep*Math.sqrt(3.0 / 4) * s)- (int) (i*Math.sqrt(3.0 / 4) * s));
 
         }
 

@@ -13,19 +13,56 @@ public class DrawHexagon {
         double s = 40.0;
         // s = side length of an equilateral triangle (the smallest triangle element)
 
-        int ofsx = 500;
-        int ofsy = 200;
+        int ofsx = 300;
+        int ofsy = 100;
 
 
-        for (int i = 0; i < 7; i++) {
+//        for (int i = 0; i < 7; i++) {
+//
+//        double y1 = 2*Math.sqrt(3.0 / 4) * s;
+//
+////        int xpoints[] = {ofsx, (int)(ofsx+s/2), (int)(ofsx+s*3.0/2), (int)(ofsx+2*s), (int)(ofsx+s*3.0/2),(int)(ofsx+s/2),ofsx };
+//        int ypoints[] = {(int)(ofsy+i*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s + i*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s+i*y1), (int)(ofsy+ i*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+ i*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+i*y1), (int)(ofsy+ i*y1)};
+//        int npoints = 6;
+//        graphics.drawPolygon(xpoints, ypoints, npoints);
+//       }
 
-        double y1 = 2*Math.sqrt(3.0 / 4) * s;
 
-        int xpoints[] = {ofsx, (int)(ofsx+s/2), (int)(ofsx+s*3.0/2), (int)(ofsx+2*s), (int)(ofsx+s*3.0/2),(int)(ofsx+s/2),ofsx };
-        int ypoints[] = {(int)(ofsy+i*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s + i*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s+i*y1), (int)(ofsy+ i*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+ i*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+i*y1), (int)(ofsy+ i*y1)};
-        int npoints = 6;
-        graphics.drawPolygon(xpoints, ypoints, npoints);
+        int columnHeight = 7;
+        int columnNum = columnHeight;
+        
+        for (int j = 0; j < (columnHeight/2-1); j++) {
+
+            for (int i = 0; i < columnNum-j; i++) {
+
+                double y1 = 2*Math.sqrt(3.0 / 4) * s;
+                double x1 = 3*s;
+                int xpoints[] = {(int)(ofsx-j*x1), (int)(ofsx+s/2-j*x1), (int)(ofsx+s*3.0/2-j*x1), (int)(ofsx+2*s-j*x1), (int)(ofsx+s*3.0/2-j*x1),(int)(ofsx+s/2-j*x1),(int)(ofsx -j*x1)};
+                int ypoints[] = {(int)(ofsy+i*y1+j*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s + i*y1+j*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s+i*y1+j*y1), (int)(ofsy+ i*y1+j*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+ i*y1+j*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+i*y1+j*y1), (int)(ofsy+ i*y1+j*y1)};
+                int npoints = 6;
+                graphics.drawPolygon(xpoints, ypoints, npoints);
+            }
+            columnNum--;
         }
+
+
+        columnNum = columnHeight;
+        for (int j = 0; j < (columnHeight/2-1); j++) {
+
+            for (int i = 0; i < columnNum-j; i++) {
+
+                double y1 = 2*Math.sqrt(3.0 / 4) * s;
+                double x1 = 3*s;
+                int xpoints[] = {(int)(ofsx+j*x1), (int)(ofsx+s/2+j*x1), (int)(ofsx+s*3.0/2+j*x1), (int)(ofsx+2*s+j*x1), (int)(ofsx+s*3.0/2+j*x1),(int)(ofsx+s/2+j*x1),(int)(ofsx +j*x1)};
+                int ypoints[] = {(int)(ofsy+i*y1+j*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s + i*y1+j*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s+i*y1+j*y1), (int)(ofsy+ i*y1+j*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+ i*y1+j*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+i*y1+j*y1), (int)(ofsy+ i*y1+j*y1)};
+                int npoints = 6;
+                graphics.drawPolygon(xpoints, ypoints, npoints);
+            }
+            columnNum--;
+        }
+
+
+
 
 //        int xpoints[] = {ofsx, (int)(ofsx+s/2), (int)(ofsx+s*3.0/2), (int)(ofsx+2*s), (int)(ofsx+s*3.0/2),(int)(ofsx+s/2),ofsx };
 //        int ypoints[] = {ofsy, (int) (ofsy-Math.sqrt(3.0 / 4) * s), (int) (ofsy-Math.sqrt(3.0 / 4) * s), ofsy, (int) (ofsy+Math.sqrt(3.0 / 4) * s), (int) (ofsy+Math.sqrt(3.0 / 4) * s), ofsy};

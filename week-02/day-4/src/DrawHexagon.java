@@ -2,19 +2,19 @@
 
 import javax.swing.*;
 
-        import java.awt.*;
+import java.awt.*;
 
-        import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class DrawHexagon {
     public static void mainDraw(Graphics graphics) {
 
 
-        double s = 40.0;
+        double s = 60.0;
         // s = side length of an equilateral triangle (the smallest triangle element)
-
-        int ofsx = 300;
-        int ofsy = 100;
+        //offsets x and y of the TOP hexagon (left vertex)
+        double ofsx = 700.0;
+        double ofsy = 100.0;
 
 
 //        for (int i = 0; i < 7; i++) {
@@ -28,105 +28,83 @@ public class DrawHexagon {
 //       }
 
 
-        int columnHeight = 7;
-        int columnNum = columnHeight;
-        
-        for (int j = 0; j < (columnHeight/2-1); j++) {
+        int columnMaxHeight = 7;
+// the longest vertical column of a hexagon drawn (having columnMaxHeight hexagons, 0th column)
+        int columnHeight = columnMaxHeight;
+        //columnHeight will be the actual column height in the for loops
 
-            for (int i = 0; i < columnNum-j; i++) {
 
-                double y1 = 2*Math.sqrt(3.0 / 4) * s;
-                double x1 = 3*s;
-                int xpoints[] = {(int)(ofsx-j*x1), (int)(ofsx+s/2-j*x1), (int)(ofsx+s*3.0/2-j*x1), (int)(ofsx+2*s-j*x1), (int)(ofsx+s*3.0/2-j*x1),(int)(ofsx+s/2-j*x1),(int)(ofsx -j*x1)};
-                int ypoints[] = {(int)(ofsy+i*y1+j*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s + i*y1+j*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s+i*y1+j*y1), (int)(ofsy+ i*y1+j*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+ i*y1+j*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+i*y1+j*y1), (int)(ofsy+ i*y1+j*y1)};
+//loop1 drawing 0th, 2nd column
+        for (int j = 0; j < (columnMaxHeight / 2 - 1); j++) {
+
+            for (int i = 0; i < columnHeight - j; i++) {
+
+                double y1 = 2 * Math.sqrt(3.0 / 4) * s;
+                double x1 = 3 * s;
+                int xpoints[] = {(int) (ofsx - j * x1), (int) (ofsx + s / 2 - j * x1), (int) (ofsx + s * 3.0 / 2 - j * x1), (int) (ofsx + 2 * s - j * x1), (int) (ofsx + s * 3.0 / 2 - j * x1), (int) (ofsx + s / 2 - j * x1), (int) (ofsx - j * x1)};
+                int ypoints[] = {(int) (ofsy + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1)};
                 int npoints = 6;
                 graphics.drawPolygon(xpoints, ypoints, npoints);
             }
-            columnNum--;
+            columnHeight--;
         }
 
+//loop2 drawing 0th, -2nd column
+        columnHeight = columnMaxHeight;
+        for (int j = 0; j < (columnMaxHeight / 2 - 1); j++) {
 
-        columnNum = columnHeight;
-        for (int j = 0; j < (columnHeight/2-1); j++) {
+            for (int i = 0; i < columnHeight - j; i++) {
 
-            for (int i = 0; i < columnNum-j; i++) {
-
-                double y1 = 2*Math.sqrt(3.0 / 4) * s;
-                double x1 = 3*s;
-                int xpoints[] = {(int)(ofsx+j*x1), (int)(ofsx+s/2+j*x1), (int)(ofsx+s*3.0/2+j*x1), (int)(ofsx+2*s+j*x1), (int)(ofsx+s*3.0/2+j*x1),(int)(ofsx+s/2+j*x1),(int)(ofsx +j*x1)};
-                int ypoints[] = {(int)(ofsy+i*y1+j*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s + i*y1+j*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s+i*y1+j*y1), (int)(ofsy+ i*y1+j*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+ i*y1+j*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+i*y1+j*y1), (int)(ofsy+ i*y1+j*y1)};
+                double y1 = 2 * Math.sqrt(3.0 / 4) * s;
+                double x1 = 3 * s;
+                int xpoints[] = {(int) (ofsx + j * x1), (int) (ofsx + s / 2 + j * x1), (int) (ofsx + s * 3.0 / 2 + j * x1), (int) (ofsx + 2 * s + j * x1), (int) (ofsx + s * 3.0 / 2 + j * x1), (int) (ofsx + s / 2 + j * x1), (int) (ofsx + j * x1)};
+                int ypoints[] = {(int) (ofsy + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1)};
                 int npoints = 6;
                 graphics.drawPolygon(xpoints, ypoints, npoints);
             }
-            columnNum--;
+            columnHeight--;
         }
 
+        //loopx drawing 1st, 3rd column
+        columnHeight = columnMaxHeight - 1;
+        ofsx = ofsx + 3.0 / 2 * s;
+        ofsy = ofsy + Math.sqrt(3.0 / 4) * s;
+
+        for (int j = 0; j < (columnMaxHeight / 2 - 1); j++) {
+
+            double y1 = 2 * Math.sqrt(3.0 / 4) * s;
+            double x1 = 3 * s;
+            for (int i = 0; i < columnHeight - j; i++) {
+
+                int xpoints[] = {(int) (ofsx + j * x1), (int) (ofsx + s / 2 + j * x1), (int) (ofsx + s * 3.0 / 2 + j * x1), (int) (ofsx + 2 * s + j * x1), (int) (ofsx + s * 3.0 / 2 + j * x1), (int) (ofsx + s / 2 + j * x1), (int) (ofsx + j * x1)};
+                int ypoints[] = {(int) (ofsy + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1)};
+                int npoints = 6;
+                graphics.drawPolygon(xpoints, ypoints, npoints);
+            }
+            columnHeight--;
+        }
+        ///loopx drawing -1st, -3rd column
+        columnHeight = columnMaxHeight - 1;
+
+        ofsx = ofsx - 3.0 * s;
 
 
-
-//        int xpoints[] = {ofsx, (int)(ofsx+s/2), (int)(ofsx+s*3.0/2), (int)(ofsx+2*s), (int)(ofsx+s*3.0/2),(int)(ofsx+s/2),ofsx };
-//        int ypoints[] = {ofsy, (int) (ofsy-Math.sqrt(3.0 / 4) * s), (int) (ofsy-Math.sqrt(3.0 / 4) * s), ofsy, (int) (ofsy+Math.sqrt(3.0 / 4) * s), (int) (ofsy+Math.sqrt(3.0 / 4) * s), ofsy};
-//        int npoints = 6;
-//        graphics.drawPolygon(xpoints, ypoints, npoints);
+        for (int j = 0; j < (columnMaxHeight / 2 - 1); j++) {
 
 
-//        int xpoints[] = {ofsx, (int)(ofsx+s/2), (int)(ofsx+s*3.0/2), (int)(ofsx+2*s), (int)(ofsx+s*3.0/2),(int)(ofsx+s/2),ofsx };
-//        int ypoints[] = {ofsy, (int) (ofsy-Math.sqrt(3.0 / 4) * s), (int) (ofsy-Math.sqrt(3.0 / 4) * s), ofsy, (int) (ofsy+Math.sqrt(3.0 / 4) * s), (int) (ofsy+Math.sqrt(3.0 / 4) * s), ofsy};
-//        int npoints = 6;
-//        graphics.drawPolygon(xpoints, ypoints, npoints);
+            for (int i = 0; i < columnHeight - j; i++) {
 
-        // position of the top vertex of the top triangle ofsx, ofsy
-
-        int rep = 40;
-        //number of repetitions (=number of the smallest triangle in one side of the biggest triangle)
-
-//        drawHexagon(graphics, s, ofsx, ofsy);
-
-//        drawHorizontals(graphics, s, rep, ofsx, ofsy);
-//        drawDescendingLines(graphics, s, rep, ofsx, ofsy);
-//        drawAscendingLines(graphics, s, rep, ofsx, ofsy);
-
-
+                double y1 = (2 * Math.sqrt(3.0 / 4) * s);
+                double x1 = 3 * s;
+                int xpoints[] = {(int) (ofsx - j * x1), (int) (ofsx + s / 2 - j * x1), (int) (ofsx + s * 3.0 / 2 - j * x1), (int) (ofsx + 2 * s - j * x1), (int) (ofsx + s * 3.0 / 2 - j * x1), (int) (ofsx + s / 2 - j * x1), (int) (ofsx - j * x1)};
+                int ypoints[] = {(int) (ofsy + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1)};
+                int npoints = 6;
+                graphics.drawPolygon(xpoints, ypoints, npoints);
+            }
+            columnHeight--;
+        }
 
     }
-
-//    public static void drawHexagon(Graphics gra, double s, int ofsx, int ofsy){
-//
-//        gra.setColor(Color.BLUE);
-//        gra.drawPolygon(ofsx, ofsy, );
-//        gra.dra
-//
-//    }
-
-
-//    public static void drawHorizontals(Graphics gra, double s, int rep, int ofsx, int ofsy) {
-//// position of the top vertex of the top triangle x, y
-//
-//
-//        for (int i = 0; i < rep+1; i++) {
-//
-//
-//
-//            gra.drawLine(ofsx - (int) (i*s / 2), ofsy + (int) (i*Math.sqrt(3.0 / 4) * s), ofsx + (int) (i*s / 2), ofsy + (int) (i*Math.sqrt(3.0 / 4) * s));
-//        }
-//    }
-//
-//    public static void drawDescendingLines(Graphics gra, double s, int rep, int ofsx, int ofsy) {
-//
-//
-//        for (int i = 0; i < rep+1; i++) {
-//            gra.drawLine(ofsx -  (int) (i*s / 2), ofsy + (int) (i*Math.sqrt(3.0 / 4) * s), ofsx + (int) (rep*s / 2) - (int) (i * s), ofsy + (int) (rep*Math.sqrt(3.0 / 4) * s));
-//        }
-//    }
-//
-//    public static void drawAscendingLines(Graphics gra, double s, int rep, int ofsx, int ofsy){
-//
-//        for (int i = 0; i < rep+1; i++) {
-//            gra.drawLine(ofsx + (int) (rep * s / 2) - (int) (i * s), ofsy + (int) ( rep *Math.sqrt(3.0 / 4) * s), ofsx +(int)(rep*s/2)-(int) (i*s / 2), ofsy + (int) (rep*Math.sqrt(3.0 / 4) * s)- (int) (i*Math.sqrt(3.0 / 4) * s));
-//
-//        }
-//
-//    }
 
 
     // Don't touch the code below

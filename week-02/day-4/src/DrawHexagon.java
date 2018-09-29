@@ -11,27 +11,15 @@ public class DrawHexagon {
 
 
         double s = 60.0;
-        // s = side length of an equilateral triangle (the smallest triangle element)
+        // s = side length of a hexagon
         //offsets x and y of the TOP hexagon (left vertex)
         double ofsx = 700.0;
         double ofsy = 100.0;
 
-
-//        for (int i = 0; i < 7; i++) {
-//
-//        double y1 = 2*Math.sqrt(3.0 / 4) * s;
-//
-////        int xpoints[] = {ofsx, (int)(ofsx+s/2), (int)(ofsx+s*3.0/2), (int)(ofsx+2*s), (int)(ofsx+s*3.0/2),(int)(ofsx+s/2),ofsx };
-//        int ypoints[] = {(int)(ofsy+i*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s + i*y1), (int) (ofsy-Math.sqrt(3.0 / 4) * s+i*y1), (int)(ofsy+ i*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+ i*y1), (int) (ofsy+Math.sqrt(3.0 / 4) * s+i*y1), (int)(ofsy+ i*y1)};
-//        int npoints = 6;
-//        graphics.drawPolygon(xpoints, ypoints, npoints);
-//       }
-
-
         int columnMaxHeight = 7;
 // the longest vertical column of a hexagon drawn (having columnMaxHeight hexagons, 0th column)
         int columnHeight = columnMaxHeight;
-        //columnHeight will be the actual column height in the for loops
+        //columnHeight will be the actual number of hexagons in a column in the for loops
 
 
 //loop1 drawing 0th, 2nd column
@@ -44,12 +32,13 @@ public class DrawHexagon {
                 int xpoints[] = {(int) (ofsx - j * x1), (int) (ofsx + s / 2 - j * x1), (int) (ofsx + s * 3.0 / 2 - j * x1), (int) (ofsx + 2 * s - j * x1), (int) (ofsx + s * 3.0 / 2 - j * x1), (int) (ofsx + s / 2 - j * x1), (int) (ofsx - j * x1)};
                 int ypoints[] = {(int) (ofsy + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1)};
                 int npoints = 6;
-                graphics.drawPolygon(xpoints, ypoints, npoints);
+                graphics.setColor(new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256)));
+                graphics.fillPolygon(xpoints, ypoints, npoints);
             }
             columnHeight--;
         }
 
-//loop2 drawing 0th, -2nd column
+//loop2 drawing 0th and -2nd column
         columnHeight = columnMaxHeight;
         for (int j = 0; j < (columnMaxHeight / 2 - 1); j++) {
 
@@ -60,12 +49,13 @@ public class DrawHexagon {
                 int xpoints[] = {(int) (ofsx + j * x1), (int) (ofsx + s / 2 + j * x1), (int) (ofsx + s * 3.0 / 2 + j * x1), (int) (ofsx + 2 * s + j * x1), (int) (ofsx + s * 3.0 / 2 + j * x1), (int) (ofsx + s / 2 + j * x1), (int) (ofsx + j * x1)};
                 int ypoints[] = {(int) (ofsy + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1)};
                 int npoints = 6;
-                graphics.drawPolygon(xpoints, ypoints, npoints);
+                graphics.setColor(new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256)));
+                graphics.fillPolygon(xpoints, ypoints, npoints);
             }
             columnHeight--;
         }
 
-        //loopx drawing 1st, 3rd column
+        //loop3 drawing 1st, 3rd column
         columnHeight = columnMaxHeight - 1;
         ofsx = ofsx + 3.0 / 2 * s;
         ofsy = ofsy + Math.sqrt(3.0 / 4) * s;
@@ -79,18 +69,17 @@ public class DrawHexagon {
                 int xpoints[] = {(int) (ofsx + j * x1), (int) (ofsx + s / 2 + j * x1), (int) (ofsx + s * 3.0 / 2 + j * x1), (int) (ofsx + 2 * s + j * x1), (int) (ofsx + s * 3.0 / 2 + j * x1), (int) (ofsx + s / 2 + j * x1), (int) (ofsx + j * x1)};
                 int ypoints[] = {(int) (ofsy + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1)};
                 int npoints = 6;
-                graphics.drawPolygon(xpoints, ypoints, npoints);
+                graphics.setColor(new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256)));
+                graphics.fillPolygon(xpoints, ypoints, npoints);
             }
             columnHeight--;
         }
-        ///loopx drawing -1st, -3rd column
+        ///loop4 drawing -1st, -3rd column
         columnHeight = columnMaxHeight - 1;
 
         ofsx = ofsx - 3.0 * s;
 
-
         for (int j = 0; j < (columnMaxHeight / 2 - 1); j++) {
-
 
             for (int i = 0; i < columnHeight - j; i++) {
 
@@ -99,7 +88,8 @@ public class DrawHexagon {
                 int xpoints[] = {(int) (ofsx - j * x1), (int) (ofsx + s / 2 - j * x1), (int) (ofsx + s * 3.0 / 2 - j * x1), (int) (ofsx + 2 * s - j * x1), (int) (ofsx + s * 3.0 / 2 - j * x1), (int) (ofsx + s / 2 - j * x1), (int) (ofsx - j * x1)};
                 int ypoints[] = {(int) (ofsy + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy - Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + Math.sqrt(3.0 / 4) * s + i * y1 + j * y1), (int) (ofsy + i * y1 + j * y1)};
                 int npoints = 6;
-                graphics.drawPolygon(xpoints, ypoints, npoints);
+                graphics.setColor(new Color((int) (Math.random() * 256), (int) (Math.random() * 256), (int) (Math.random() * 256)));
+                graphics.fillPolygon(xpoints, ypoints, npoints);
             }
             columnHeight--;
         }

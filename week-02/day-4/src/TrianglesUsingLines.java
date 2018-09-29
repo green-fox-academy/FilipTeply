@@ -11,7 +11,7 @@ public class TrianglesUsingLines {
 
         double s = 25.0;
         // s = side length of an equilateral triangle (the smallest triangle element)
-        int ofsx = 800;
+        int ofsx = 700;
         int ofsy = 40;
         // position of the top vertex of the top triangle ofsx, ofsy
 

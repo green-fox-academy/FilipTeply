@@ -1,6 +1,7 @@
 import javax.swing.*;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
@@ -25,6 +26,7 @@ public class PurpleSteps3dver2 {
         }
 
     }
+
 
 
 

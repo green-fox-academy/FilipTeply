@@ -11,15 +11,15 @@ public class DivideByZero {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        double divisor = sc.nextInt();
+        int divisor = sc.nextInt();
 
         divide10ByNumber(divisor);
 
     }
 
-    public static void divide10ByNumber(double divisor) {
+    public static void divide10ByNumber(int divisor) {
 
-        double result =  10.0 / divisor;
+        int result =  10 / divisor;
         try {
             System.out.println(result);
 

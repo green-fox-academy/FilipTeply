@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Logs {
@@ -16,38 +16,33 @@ public class Logs {
         arrayWithUniqueIPs("Log.txt");
     }
 
-    public static int[] arrayWithUniqueIPs(String filename) {
-
-        String[] myUniqueArray = new String[];
-        String[] myArray = new String[];
+    public static String[] arrayWithUniqueIPs(String filename) {
 
         try {
             Path myPath = Paths.get(filename);
             List<String> lines = Files.readAllLines(myPath);
+            List<String> IPs = ArrayList<>();
+            List<String> uniqueIPs = ArrayList<>();
 
             for (int i = 0; i < lines.size(); i++) {
-                if (myArray.contains())
-                myArray[i] = lines.get(i);
-
+                IPs.add(lines.get(i).substring(24, 40).trim());
             }
 
-
-            for (int i = 0; i < lines.size() ; i++) {
-                lines.get(i);
-
-                if (myList.get().co)
-
+            for (int i = 0; i < IPs.size(); i++) {
+                if (!uniqueIPs.contains(IPs.get(i))) {
+                    uniqueIPs.add(IPs.get(i));
+                }
             }
 
+            String[] myUniqueIParray;
+            for (int i = 0; i < uniqueIPs.size(); i++) {
+                myUniqueIParray[i] = uniqueIPs.get(i);
+            }
+            return myUniqueIParray;
 
-
-            return myUniqueArray[];
-
-
-        } catch (IOException e) {
+        } catch (
+                IOException e) {
             System.out.println("IOException");
         }
-
     }
-
 }

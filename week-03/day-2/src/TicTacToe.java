@@ -1,4 +1,9 @@
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TicTacToe {
 
@@ -22,6 +27,31 @@ public class TicTacToe {
 
         try {
 
+            Path myPath = Paths.get(filename);
+
+            List<String> lines = Files.readAllLines(myPath);
+
+
+
+            for (int i = 0; i < lines.size(i); i++) {
+
+                if ()
+
+                    columns.get(i);
+
+            }
+
+
+            for (int i = 0; i < lines.size(); i++) {
+                if (lines.get(i) == "X" && lines.get(i) == lines.get(i - 1) && lines.get(i) == lines.get(i + 1)) {
+                    System.out.println("X");
+                    if (lines)
+                }
+            }
+
+            System.out.println("O");
+            System.out.println("X");
+            System.out.println("draw");
 
         } catch (IOException e) {
             System.out.println("IOException");

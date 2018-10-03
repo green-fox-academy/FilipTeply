@@ -47,7 +47,7 @@ public class DiceSet {
         for (int i = 0; i < 6; i++) {
             while (diceSet.dices[i] != 6) {
                 diceSet.reroll(i);
-                            }
+            }
             System.out.println(diceSet.dices[i]);
         }
 

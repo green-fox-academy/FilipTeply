@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +8,6 @@ public class DiceSet {
 // Check the current rolled numbers with getCurrent()
 // You can reroll with reroll()
 // Your task is to roll the dices until all of the dices are 6
-
-
 
 
     int[] dices = new int[6];
@@ -43,16 +40,17 @@ public class DiceSet {
     public static void main(String[] args) {
         DiceSet diceSet = new DiceSet();
 
+
         //List<DiceSet> individualRolls = new ArrayList<>();
 
+
         for (int i = 0; i < 6; i++) {
-
-            while(  ){
-                diceSet.reroll();
-
-            }
-
+            while (diceSet.dices[i] != 6) {
+                diceSet.reroll(i);
+                            }
+            System.out.println(diceSet.dices[i]);
         }
+
 
         diceSet.getCurrent();
         diceSet.roll();
@@ -62,8 +60,6 @@ public class DiceSet {
         diceSet.getCurrent();
         diceSet.reroll(4);
         diceSet.getCurrent();
-
-
 
 
     }

@@ -35,8 +35,7 @@ public class Logs {
                 }
             }
 
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             System.out.println("IOException");
         }
         return uniqueIPs;
@@ -63,7 +62,7 @@ public class Logs {
         } catch (IOException e) {
             System.out.println("IOException");
         }
-        return GETcount/POSTcount;
+        return (double) GETcount / (double) POSTcount;
 
 
     }

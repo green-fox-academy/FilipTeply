@@ -5,36 +5,28 @@ public class Strings1 {
 
     public static void main(String[] args) {
 
-        System.out.println(xToyfunction("avghhsxyyxx"));
+        System.out.println(xToyfunction("XXxaxxvghhsxyxxyxx"));
 
     }
 
     public static String xToyfunction(String s) {
 
-        if (s.contains("x") == false) {
-            return s;
-        } else {
-            if()
+        return s.replace('x', 'y');
 
-
-            return s.substring(0, s.length()). + xToyfunction();
-
-            ) .charAt((s.substring(s.length()) xToyfunction(s.replace('x', 'y'));
-        }
 
     }
-
-
 }
 
-//
+//// unsuccessful attempt at recursive solution
 //    public static String xToyfunction(String s) {
 //
-//
-//        if (s.contains("x") == false) {
+//        if (s.substring(1)) == 'y') {
 //            return s;
-//        } else {
-//            return xToyfunction(s.replace('x', 'y'));
+//        } else if (s.substring(1).charAt(0)) == 'x') {
+//            return 'y' + xToyfunction(s.substring(1));
+//        }
+//        else {
+//            return "error";
 //        }
 //
 //    }

@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 
 import java.awt.*;
@@ -8,14 +7,11 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class SierpinskyCarpet {
     public static void mainDraw(Graphics graphics) {
 
-
-        double xc = WIDTH / 2d;
-        double yc = WIDTH / 2d;
-        double size = WIDTH / 3d;
-
+        double xc = 800 / 2d;
+        double yc = 800 / 2d;
+        double size = 800 / 3d;
 
         drawSquare(graphics, xc, yc, size);
-
 
     }
 
@@ -29,8 +25,6 @@ public class SierpinskyCarpet {
             drawSquare(gra, (xc-3d*size), (yc), (size));
             drawSquare(gra, (xc), (yc+3d*size),(size));
             drawSquare(gra, (xc+3d*size), (yc), (size));
-
-
 
         } else {
             return;

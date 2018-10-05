@@ -7,7 +7,7 @@ import javax.swing.*;
 public class FractalsStars {
     public static void mainDraw(Graphics graphics) {
 
-        double inisize = (double) (WIDTH);
+        double inisize = 800d;
         double[] coor = new double[3];
         coor[0] = inisize / 2d;
         coor[1] = inisize / 2d;
@@ -15,10 +15,12 @@ public class FractalsStars {
 
         drawHash(graphics, coor);
 
-        drawSingleHash(graphics, coor);
+
     }
 
     public static void drawHash(Graphics gra, double[] coor) {
+
+        drawSingleHash(gra, coor);
 
         if (coor[2] >= 5) {
             double[] coor1 = new double[3];

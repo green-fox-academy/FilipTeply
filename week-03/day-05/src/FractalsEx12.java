@@ -1,0 +1,2 @@
+public class FractalsEx12 {
+}

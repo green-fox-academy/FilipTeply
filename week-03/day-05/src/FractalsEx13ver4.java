@@ -15,8 +15,6 @@ public class FractalsEx13ver4 {
         coor[1] = inisize / 2d;
         coor[2] =  inisize;
 
-
-
         drawHash(graphics, coor);
 
         drawSingleHash(graphics, coor);
@@ -24,23 +22,19 @@ public class FractalsEx13ver4 {
 
     public static void drawHash(Graphics gra, double[] coor) {
 
-
         if (coor[2] >= 5) {
             double[] coor1 = new double[3];
 
             coor1[0] = coor[0];
-            coor1[1] = coor[1] - coor[2];
+            coor1[1] = coor[1] - coor[2]/3;
             coor1[2] = coor[2] / 3d;
             drawSingleHash(gra, coor1);
             drawHash(gra, coor1);
 
-
-
-
             double[] coor2 = new double[3];
 
             coor2[0] = coor[0];
-            coor2[1] = coor[1] + coor[2];
+            coor2[1] = coor[1] + coor[2]/3;
             coor2[2] = coor[2] / 3d;
             drawSingleHash(gra, coor2);
             drawHash(gra, coor2);
@@ -49,7 +43,7 @@ public class FractalsEx13ver4 {
 
             double[] coor3 = new double[3];
 
-            coor3[0] = coor[0] - coor[2];
+            coor3[0] = coor[0] - coor[2]/3;
             coor3[1] = coor[1];
             coor3[2] = coor[2] / 3d;
             drawSingleHash(gra, coor3);
@@ -58,13 +52,11 @@ public class FractalsEx13ver4 {
 
             double[] coor4 = new double[3];
 
-            coor4[0] = coor[0] + coor[2];
+            coor4[0] = coor[0] + coor[2]/3;
             coor4[1] = coor[1];
             coor4[2] = coor[2] / 3d;
             drawSingleHash(gra, coor4);
             drawHash(gra, coor4);
-
-
 
         } else if (coor[2] >= 5) {
             return;

@@ -10,8 +10,9 @@ public class FractalsEx12ver2 {
 
 
         double inisize = (double) WIDTH;
-        double xin = inisize / 2d;
-        double yin = inisize / 2d;
+        double[] coor = new double[2];
+        coor[0] = inisize/ 2d;
+        coor[1] = inisize / 2d;
 
 //        graphics.setColor(Color.orange);
 
@@ -21,8 +22,8 @@ public class FractalsEx12ver2 {
 //        int x = WIDTH;
 ////        int y = WIDTH;
 
-        drawHash(graphics, xin, yin, inisize);
-        repeatHashes(graphics, );
+        drawHash(graphics, coor, inisize);
+        //repeatHashes(graphics, );
 
 //        int increment = 70;
 //        int increment2 = 10;
@@ -61,23 +62,31 @@ public class FractalsEx12ver2 {
 //
 //        }
 
-    public static void repeatHashes(Graphics gra) {
-    }
+//    public static void repeatHashes(Graphics gra) {
+//
+//        if (){}
+//
+//        else {
+//            drawHash(gra, xin, yin, s);
+//        }
+//
+//    }
 
-    drawHash(Graphics,
 
 
-             public static void drawHash(Graphics gra, double xin, double yin, double s) {
+
+             public static double[] drawHash(Graphics gra, double[] coor, double s) {
 
 //        double inisize = (double) WIDTH;
 //        double xin = inisize / 2d;
 //        double yin = inisize / 2d;
 
 
-        gra.drawLine((int) (xin - s / 6d), (int) (yin - s / 2d), (int) (xin - s / 6d), (int) (yin + s / 2d));
-        gra.drawLine((int) (xin + s / 6d), (int) (yin - s / 2d), (int) (xin + s / 6d), (int) (yin + s / 2d));
-        gra.drawLine((int) (xin - s / 2d), (int) (yin - s / 6d), (int) (xin + s / 2d), (int) (yin - s / 6d));
-        gra.drawLine((int) (xin - s / 2d), (int) (yin + s / 6d), (int) (xin + s / 2d), (int) (yin + s / 6d));
+        gra.drawLine((int) (coor[0] - s / 6d), (int) (coor[1] - s / 2d), (int) (coor[0] - s / 6d), (int) (coor[1] + s / 2d));
+        gra.drawLine((int) (coor[0] + s / 6d), (int) (coor[1] - s / 2d), (int) (coor[0] + s / 6d), (int) (coor[1] + s / 2d));
+        gra.drawLine((int) (coor[0] - s / 2d), (int) (coor[1] - s / 6d), (int) (coor[0] + s / 2d), (int) (coor[1] - s / 6d));
+        gra.drawLine((int) (coor[0] - s / 2d), (int) (coor[1] + s / 6d), (int) (coor[0] + s / 2d), (int) (coor[1] + s / 6d));
+        return coor;
     }
 
     // Don't touch the code below

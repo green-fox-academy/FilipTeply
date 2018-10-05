@@ -13,7 +13,7 @@
 public class FleetOfThings {
 
     public static void main(String[] args) {
-        Fleet fleet = new Fleet();
+        Fleet fleet1 = new Fleet();
 
         // Create a fleet of things to have this output:
         // 1. [ ] Get milk
@@ -28,19 +28,22 @@ public class FleetOfThings {
 
 
 
-        fleet.add(milk);
-        fleet.add(obstacles);
-        fleet.add(standUp);
-        fleet.add(eatLunch);
+        fleet1.add(milk);
+        fleet1.add(obstacles);
+        fleet1.add(standUp);
+        fleet1.add(eatLunch);
 
         standUp.complete();
         eatLunch.complete();
+        // the following cannot undo complete eatLunch.complete();
+        // it seems to be an irreversible completion
 
 
 
 
 
-        System.out.println(fleet);
+        System.out.println(fleet1);
+        System.out.println();
     }
 }
 

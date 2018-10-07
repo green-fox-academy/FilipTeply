@@ -43,18 +43,22 @@ public class Sponsor {
 
 
     public static void main(String[] args) {
-        Sponsor sponsor1 = new Sponsor("John", 54, "male", "IBM");
-        Sponsor sponsor2 = new Sponsor();
 
-        sponsor1.hire();
-        sponsor1.introduce();
-        sponsor1.getGoal();
 
-        System.out.println();
+//        Sponsor sponsor1 = new Sponsor("John", 54, "male", "IBM");
+//        Sponsor sponsor2 = new Sponsor();
+//
+//        sponsor1.hire();
+//        sponsor1.introduce();
+//        sponsor1.getGoal();
+//
+//        System.out.println();
+//
+//        sponsor2.introduce();
+//        sponsor2.hire();
+//        System.out.println(sponsor2.hiredStudents);
 
-        sponsor2.introduce();
-        sponsor2.hire();
-        System.out.println(sponsor2.hiredStudents);
+
     }
 
 }

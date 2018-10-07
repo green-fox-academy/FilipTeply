@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SymmetricMatrixVer3 {
 
@@ -23,26 +24,31 @@ public class SymmetricMatrixVer3 {
 
         symmetricMatrix.add(new ArrayList<Integer>(Arrays.asList(7, 0, 3)));
         symmetricMatrix.add(new ArrayList<Integer>(Arrays.asList(0, 3, 2)));
-        symmetricMatrix.add(new ArrayList<Integer>(Arrays.asList(3, 2, 3)));
+        symmetricMatrix.add(new ArrayList<Integer>(Arrays.asList(55, 2, 3)));
 
         ArrayList<Integer> line = new ArrayList<Integer>();
 
         System.out.println(isSymmetric(symmetricMatrix)); // should print out true
+
+
     }
+
 
     public static boolean isSymmetric(ArrayList<ArrayList<Integer>> testMatrix) {
         boolean bool = true;
 
+// the following for loop shows the testMatrix lines
+//        for (int i = 0; i < testMatrix.size(); i++) {
+//            for (int j = 0; j < testMatrix.get(i).size(); j++) {
+//                System.out.print(testMatrix.get(i).get(j) + " ");
+//            }
+//            System.out.println();
+//        }
 
-        for (int i = 0; i < testMatrix.size(); i++) {
-            for (int j = 0; j < testMatrix.get(i).size(); j++) {
-                System.out.print(testMatrix.get(i).get(j) + " ");
-            }
-            System.out.println();
-        }
+//foreach loop which does the same as the for loop above;-)))
 
-        for (String line : testMatrix) {
-            System.out.println(line);
+        for (ArrayList mLines : testMatrix) {
+            System.out.println(mLines);
         }
 
         for (int i = 0; i < testMatrix.size(); i++) {
@@ -52,6 +58,14 @@ public class SymmetricMatrixVer3 {
                 }
             }
         }
+
+// ?? can the for for if block be shortened using foreach loop???
+// for (ArrayList<ArrayList<Integer>> lines && columns: testMatrix) {
+//            if (testMatrix.mLines.get() != testMatrix.get().mLines) {
+//                bool = false;
+//            }
+//        }
+
         return bool;
     }
 }

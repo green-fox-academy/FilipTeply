@@ -5,7 +5,7 @@ public class Bunny1 {
 
     public static void main(String[] args) {
 
-        System.out.println(bunnyEars(1));
+        System.out.println(bunnyEars(3));
 
     }
 

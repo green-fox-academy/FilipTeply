@@ -1,14 +1,15 @@
+import java.util.ArrayList;
+
 public class PersonExerciseCombined {
 
+    public static class Person {
 
-    public class Person {
-
-        String name;
-        int age;
-        String gender; //male or female
+        String name = "Jane Doe";
+        int age = 30;
+        String gender = "female"; //male or female
 
         public Person() {
-            this("Jane Doe", 30, "female");
+            //this("Jane Doe", 30, "female");
             //or the following: this.name = "Jane Doe";
             //this.age = 30;
             //this.gender = female;
@@ -21,40 +22,46 @@ public class PersonExerciseCombined {
         }
 
         public void introduce() {
-            System.out.println("Hi, I'm " + this.name + ", a " + this.age + " year old " + this.gender);
+            System.out.println("Hi, I'm " + this.name + ", a " + this.age + " year old "
+                    + this.gender + ".");
         }
 
         public void getGoal() {
-            System.out.println("My goal is: Live for the moment!");
+            System.out.println("My goal is: Live for the moment.");
         }
     }
 
-    public class Student {
+    public static class Student {
 
-        String name;
-        int age;
-        String gender; //male or female
+        String name = "Jane Doe";
+        int age = 30;
+        String gender = "female"; //male or female
 
-        String previousOrganization; //previous company / school
-        int skippedDays;
+        String previousOrganization = "The School of Life"; //previous company / school
+        int skippedDays = 0;
 
         public Student() {
-            this("Jane Doe", 30, "female");
+            //this();
+            //this("Jane Doe", 30, "female");
             //or the following: this.name = "Jane Doe";
             //this.age = 30;
             //this.gender = female;
         }
 
+        // does the following constructor make any difference?
         public Student(String name, int age, String gender) {
-            this.name = name;
-            this.age = age;
-            this.gender = gender;
+            //this("Jane Doe", 30, "female");
         }
 
         public Student(String name, int age, String gender, String previousOrganization) {
-            this();
+            //?? why not the following??
+            // this();
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+
             this.previousOrganization = previousOrganization;
-            this.skippedDays = 0;
+
         }
 
         // why this is not possible here?: public Student(){}
@@ -69,7 +76,7 @@ public class PersonExerciseCombined {
 //    }
 
         public void getGoal() {
-            System.out.println("Be a junior software developer.");
+            System.out.println("My goal is: Be a junior software developer.");
         }
 
         public void introduce() {
@@ -85,7 +92,7 @@ public class PersonExerciseCombined {
 
     }
 
-    public class Mentor {
+    public static class Mentor {
 
 //    String name ;
 //    int age;
@@ -123,7 +130,7 @@ public class PersonExerciseCombined {
 //    }
 
         public void getGoal() {
-            System.out.println("Educate brilliant junior software developers.");
+            System.out.println("My goal is: Educate brilliant junior software developers.");
         }
 
         public void introduce() {
@@ -134,7 +141,7 @@ public class PersonExerciseCombined {
 
     }
 
-    public class Sponsor {
+    public static class Sponsor {
 
         String name;
         int age;
@@ -152,7 +159,7 @@ public class PersonExerciseCombined {
 
         public Sponsor() {
             this("Jane Doe", 30, "female", "Google");
-            this.hiredStudents = 10;
+//          ??  this.hiredStudents = 0;
         }
 
         public Sponsor(String name, int age, String gender, String company) {
@@ -160,7 +167,7 @@ public class PersonExerciseCombined {
             this.age = age;
             this.gender = gender;
             this.company = company;
-            this.hiredStudents = 3;
+
         }
 
         public void introduce() {
@@ -170,7 +177,7 @@ public class PersonExerciseCombined {
         }
 
         public void getGoal() {
-            System.out.println("Hire brilliant junior software developers.");
+            System.out.println("My goal is: Hire brilliant junior software developers.");
         }
 
         public int hire() {
@@ -180,7 +187,58 @@ public class PersonExerciseCombined {
 
     public static void main(String[] args) {
 
-        
+        ArrayList<Person> people = new ArrayList<>();
+        ArrayList<Student> students = new ArrayList<>();
+        ArrayList<Mentor> mentors = new ArrayList<>();
+        ArrayList<Sponsor> sponsors = new ArrayList<>();
+
+        Person mark = new Person("Mark", 46, "male");
+        people.add(mark);
+        Person jane = new Person();
+        people.add(jane);
+        Student john = new Student("John Doe", 20, "male", "BME");
+        students.add(john);
+        Student student = new Student();
+        students.add(student);
+        Mentor gandhi = new Mentor("Gandhi", 148, "male", "senior");
+        mentors.add(gandhi);
+        Mentor mentor = new Mentor();
+        mentors.add(mentor);
+        Sponsor sponsor = new Sponsor();
+        sponsors.add(sponsor);
+        Sponsor elon = new Sponsor("Elon Musk", 46, "male", "SpaceX");
+        sponsors.add(elon);
+
+        student.skipDays(3);
+
+        for (int i = 0; i < 5; i++) {
+            elon.hire();
+        }
+
+        for (int i = 0; i < 3; i++) {
+            sponsor.hire();
+        }
+
+        for (Person per : people) {
+            per.introduce();
+            per.getGoal();
+        }
+
+        for (Student person : students) {
+            person.introduce();
+            person.getGoal();
+        }
+
+        for (Mentor person : mentors) {
+            person.introduce();
+            person.getGoal();
+        }
+
+        for (Sponsor person : sponsors) {
+            person.introduce();
+            person.getGoal();
+        }
+
     }
 //
 }

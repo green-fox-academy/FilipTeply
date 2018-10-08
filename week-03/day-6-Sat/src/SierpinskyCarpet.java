@@ -16,16 +16,26 @@ public class SierpinskyCarpet {
     }
 
     public static void drawSquare(Graphics gra, double xc, double yc, double s) {
+
+        //draws a central square
+
         gra.drawRect((int)(xc), (int)(yc), (int)(s), (int)(s));
 
-        if (s > 1) {
+        if (s > 3) {
             s = s/3d;
+        //draws 4 squares in the gasket around the central square
 
-            drawSquare(gra, xc + s, yc-2*s, s);
-            drawSquare(gra, xc+4*s, yc+s, s);
-            drawSquare(gra, xc+s, yc+4*s, s);
-            drawSquare(gra, xc-2*s, yc+s, s);
+            drawSquare(gra, xc + s, yc-2d*s, s);
+            drawSquare(gra, xc+4d*s, yc+s, s);
+            drawSquare(gra, xc+s, yc+4d*s, s);
+            drawSquare(gra, xc-2d*s, yc+s, s);
 
+        //draws 4 squares in the gasket around the central square
+
+            drawSquare(gra, xc - 2d*s, yc-2d*s, s);
+            drawSquare(gra, xc+4d*s, yc-2d*s, s);
+            drawSquare(gra, xc+4d*s, yc+4d*s, s);
+            drawSquare(gra, xc-2d*s, yc+4d*s, s);
 
         } else {
             return;

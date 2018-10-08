@@ -28,11 +28,28 @@
 //
 package GardenApp;
 
+import java.util.ArrayList;
+
 public class GardenMain {
 
     public static void main(String[] args) {
 
+        Garden plants = new Garden();
+        //
 
+
+        Tree tree1 = new Tree("purple");
+        Tree tree2 = new Tree("orange");
+
+        Flower flower1 = new Flower("yellow");
+        Flower flower2 = new Flower("blue");
+
+        plants.addPlants(flower1);
+        plants.addPlants(flower2);
+        plants.addPlants(tree1);
+        plants.addPlants(tree2);
+
+        plants.info();
 
     }
 

@@ -1,8 +1,8 @@
 import javax.swing.*;
 
-        import java.awt.*;
+import java.awt.*;
 
-        import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class SierpinskyCarpet {
     public static void mainDraw(Graphics graphics) {
@@ -18,24 +18,24 @@ public class SierpinskyCarpet {
     public static void drawSquare(Graphics gra, double xc, double yc, double s) {
 
         //draws a central square
-
-        gra.drawRect((int)(xc), (int)(yc), (int)(s), (int)(s));
+        gra.setColor(Color.BLACK);
+        gra.fillRect((int) (xc), (int) (yc), (int) (s), (int) (s));
 
         if (s > 3) {
-            s = s/3d;
-        //draws 4 squares in the gasket around the central square
+            s = s / 3d;
+            //draws 4 squares in the gasket around the central square
 
-            drawSquare(gra, xc + s, yc-2d*s, s);
-            drawSquare(gra, xc+4d*s, yc+s, s);
-            drawSquare(gra, xc+s, yc+4d*s, s);
-            drawSquare(gra, xc-2d*s, yc+s, s);
+            drawSquare(gra, xc + s, yc - 2d * s, s);
+            drawSquare(gra, xc + 4d * s, yc + s, s);
+            drawSquare(gra, xc + s, yc + 4d * s, s);
+            drawSquare(gra, xc - 2d * s, yc + s, s);
 
-        //draws 4 squares in the gasket around the central square
+            //draws 4 squares in the gasket around the central square
 
-            drawSquare(gra, xc - 2d*s, yc-2d*s, s);
-            drawSquare(gra, xc+4d*s, yc-2d*s, s);
-            drawSquare(gra, xc+4d*s, yc+4d*s, s);
-            drawSquare(gra, xc-2d*s, yc+4d*s, s);
+            drawSquare(gra, xc - 2d * s, yc - 2d * s, s);
+            drawSquare(gra, xc + 4d * s, yc - 2d * s, s);
+            drawSquare(gra, xc + 4d * s, yc + 4d * s, s);
+            drawSquare(gra, xc - 2d * s, yc + 4d * s, s);
 
         } else {
             return;

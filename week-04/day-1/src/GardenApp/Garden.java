@@ -27,7 +27,6 @@ public class Garden {
     }
 
 
-
     public void addPlants(Plants plant) {
         plants.add(plant);
 

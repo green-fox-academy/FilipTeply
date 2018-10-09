@@ -2,24 +2,21 @@ package GFAstructure;
 
 import GFAstructure.Person1;
 
-public class Student1 extends Person1 {
+public class Student1 extends Person1 implements Cloneable {
 
-    String previousOrganization; //previous company / school
+    String previousOrganization;
     int skippedDays;
 
-
     public Student1() {
-        this("Jane Doe", 30, "female", "The School of Life");
-        //super.name = "Jane Doe";
-        //super.age = 30;
-        //super.gender = female;
+        this.previousOrganization = "The School of Life";
+        this.skippedDays = 0;
     }
 
 
     public Student1(String name, int age, String gender, String previousOrganization) {
         super(name, age, gender);
         this.previousOrganization = previousOrganization;
-        this.skippedDays = 0;
+
     }
 
     @Override
@@ -38,5 +35,22 @@ public class Student1 extends Person1 {
         return skippedDays += numberOfDays;
 
     }
+
+    @Override
+    public Student1 clone() {
+
+        Student1 clone = new Student1();
+        clone.name = this.name;
+        clone.age = this.age;
+        clone.gender = this.gender;
+        clone.previousOrganization = this.previousOrganization;
+        clone.skippedDays = this.skippedDays;
+        return clone;
+
+//        String previousOrganization; //previous company / school
+//        int skippedDays;
+
+    }
+
 
 }

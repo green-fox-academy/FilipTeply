@@ -27,6 +27,12 @@ public class GFAmain {
         Sponsor1 elon = new Sponsor1("Elon Musk", 46, "male", "SpaceX");
         people.add(elon);
 
+        Student1 student3 = new Student1("John", 20, "male", "BME");
+        Student1 cloned = student3.clone();
+
+
+//        John, a 20 years old male from BME
+
         student.skipDays(3);
 
         for (int i = 0; i < 5; i++) {
@@ -47,7 +53,9 @@ public class GFAmain {
         awesome.addStudent(john);
         awesome.addMentor(mentor);
         awesome.addMentor(gandhi);
+        awesome.addStudent(student3);
         awesome.info();
+        cloned.introduce();
 
     }
 }

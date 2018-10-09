@@ -1,4 +1,4 @@
-public class Student {
+public class Student implements Cloneable {
 
     String name;
     int age;

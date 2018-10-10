@@ -24,6 +24,7 @@ public class Tree extends Plant {
 
     @Override
     public String toString() {
+        //System.out.println();
         return (this.needsWater() ? "The " + this.color + " Tree needs water." :
                 "The " + this.color + " Tree doesn't need water.");
     }

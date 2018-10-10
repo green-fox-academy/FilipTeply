@@ -14,6 +14,7 @@ public class Plant {
         this.color = color;
         this.waterStatus = waterStatus;
 
+
     }
 
     public boolean needsWater() {

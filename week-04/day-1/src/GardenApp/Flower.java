@@ -37,7 +37,7 @@ public class Flower extends Plant {
 
     @Override
     public String toString() {
-
+        //System.out.println();
         return (needsWater() ? "The " + this.color + " Flower needs water." :
                 "The " + this.color + " Flower doesn't need water.");
     }
@@ -47,4 +47,5 @@ public class Flower extends Plant {
 //        return (needsWater() ? "The " + this.color + " needs water." :
 //                "The " + this.color + " doesn't need water.");
 //    }
+
 }

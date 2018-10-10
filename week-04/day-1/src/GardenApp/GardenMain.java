@@ -34,22 +34,27 @@ public class GardenMain {
 
     public static void main(String[] args) {
 
-        Garden plants = new Garden();
-        //
+        Garden garden1 = new Garden();
+        //Garden plants = new Garden();
 
+        Tree tree1 = new Tree("purple",0);
+        Tree tree2 = new Tree("orange",0);
 
-        Tree tree1 = new Tree("purple");
-        Tree tree2 = new Tree("orange");
+        Flower flower1 = new Flower("yellow",0);
+        Flower flower2 = new Flower("blue",0);
 
-        Flower flower1 = new Flower("yellow");
-        Flower flower2 = new Flower("blue");
+//        plants.addPlant(flower1);
+//        plants.addPlant(flower2);
+//        plants.addPlant(tree1);
+//        plants.addPlant(tree2);
 
-        plants.addPlants(flower1);
-        plants.addPlants(flower2);
-        plants.addPlants(tree1);
-        plants.addPlants(tree2);
+        garden1.addPlant(flower1);
+        garden1.addPlant(flower2);
+        garden1.addPlant(tree1);
+        garden1.addPlant(tree2);
 
-        plants.info();
+        //plants.info();
+        garden1.info();
 
     }
 

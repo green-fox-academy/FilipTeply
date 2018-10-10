@@ -47,18 +47,20 @@ public class Garden {
         }
     }
 
-    @Override
-    public void needWater() {
-
-        for (Plant item : plants) {
-            System.out.println(plants.toString());
-        }
-    }
-
-
     public void info() {
-        plants.toString();
+        //System.out.println();
+        System.out.println(plants.toString());
     }
+
+//    @Override
+//    public void needWater() {
+//
+//        for (Plant item : plants) {
+//            System.out.println(plants.toString());
+//        }
+//    }
+
+
 
 }
 

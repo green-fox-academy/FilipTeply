@@ -20,16 +20,15 @@ import java.util.ArrayList;
 public class Garden {
 
 
-    ArrayList<Plants> plants;
+    ArrayList<Plant> plants;
 
     public Garden() {
         this.plants = new ArrayList<>();
     }
 
 
-    public void addPlants(Plants plant) {
+    public void addPlant(Plant plant) {
         plants.add(plant);
-
     }
 
     public void waterGarden(int waterAmount) {
@@ -37,7 +36,7 @@ public class Garden {
         double waterShare;
         waterShare = waterAmount / plants.size();
 
-        for (Plants item : plants) {
+        for (Plant item : plants) {
 
             if (item instanceof Flower) {
                 item.waterStatus += 0.75 * waterShare;
@@ -48,17 +47,19 @@ public class Garden {
         }
     }
 
-        public void plantsNeedWater() {
+    @Override
+    public void needWater() {
 
-            for (Plants item : plants) {
-                System.out.println(plants.toString());
-            }
+        for (Plant item : plants) {
+            System.out.println(plants.toString());
         }
-            public void info() {
+    }
 
-                System.out.println(plants.toString());
-            }
 
-        }
+    public void info() {
+        plants.toString();
+    }
+
+}
 
 

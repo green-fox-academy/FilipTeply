@@ -1,27 +1,31 @@
 package GardenApp;
 
-public class Tree extends Plants {
+public class Tree extends Plant {
+
+    String color;
+    double waterStatus;
 
     public Tree() {
+        super();
     }
 
-    public Tree(String color)
-    {
-    this.color = color;
+    public Tree(String color, double waterStatus) {
+        this.color = color;
+        this.waterStatus = waterStatus;
     }
 
-    public String treeNeedsWater() {
+    public boolean needsWater() {
         if (this.waterStatus < 10) {
-            return "The " + this.color + " Tree needs water.";
+            return true;
         } else {
-            return "The " + this.color + " Tree doesn't need water.";
+            return false;
         }
     }
 
     @Override
-    public String toString(){
-        return (needsWater()? "The " + this.color +  " needs water." :
-                "The " + this.color +  " doesn't need water.");
+    public String toString() {
+        return (this.needsWater() ? "The " + this.color + " Tree needs water." :
+                "The " + this.color + " Tree doesn't need water.");
     }
 
 }

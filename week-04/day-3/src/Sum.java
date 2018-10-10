@@ -1,11 +1,25 @@
+import java.util.ArrayList;
+
 public class Sum {
 
-    int sum;
+    ArrayList<Integer> numbers;
+    //ArrayList<Integer> numbers = new ArrayList<>();
+    int sum = 0;
 
-    public Sum(){
+    public Sum() {
     }
 
-    public static void
+    public Sum(ArrayList<Integer> numbers) {
+        this.numbers = numbers;
+    }
+
+
+    public int getSum(ArrayList<Integer> numbers) {
+        for (Integer itemNo : numbers) {
+            sum += itemNo;
+        }
+        return sum;
+    }
 
 
 }

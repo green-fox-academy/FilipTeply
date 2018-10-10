@@ -13,8 +13,6 @@ public class Plant {
     public Plant(String color, double waterStatus) {
         this.color = color;
         this.waterStatus = waterStatus;
-
-
     }
 
     public boolean needsWater() {

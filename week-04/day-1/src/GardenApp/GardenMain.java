@@ -35,6 +35,7 @@ public class GardenMain {
     public static void main(String[] args) {
 
         Garden garden1 = new Garden();
+
         //Garden plants = new Garden();
 
         Tree tree1 = new Tree("purple",0);

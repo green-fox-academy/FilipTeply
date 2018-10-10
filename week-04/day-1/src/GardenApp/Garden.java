@@ -34,7 +34,7 @@ public class Garden {
     public void waterGarden(int waterAmount) {
 
         double waterShare;
-        waterShare = waterAmount / plants.size();
+        waterShare = (double)(waterAmount) / (double)(plants.size());
 
         for (Plant item : plants) {
 

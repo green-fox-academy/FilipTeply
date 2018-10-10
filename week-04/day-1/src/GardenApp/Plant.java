@@ -7,7 +7,7 @@ public class Plant {
 
     public Plant() {
         this.color = "default color";
-        this.waterStatus = 0.0;
+        this.waterStatus = 0;
     }
 
     public Plant(String color, double waterStatus) {

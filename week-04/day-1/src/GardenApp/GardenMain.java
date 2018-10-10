@@ -38,11 +38,12 @@ public class GardenMain {
 
         //Garden plants = new Garden();
 
-        Tree tree1 = new Tree("purple",0);
-        Tree tree2 = new Tree("orange",0);
+        Tree tree1 = new Tree("purple", 0);
+        Tree tree2 = new Tree("orange", 0);
+        //Tree tree3 = new Tree();
 
-        Flower flower1 = new Flower("yellow",0);
-        Flower flower2 = new Flower("blue",0);
+        Flower flower1 = new Flower("yellow", 0);
+        Flower flower2 = new Flower("blue", 0);
 
 //        plants.addPlant(flower1);
 //        plants.addPlant(flower2);
@@ -53,10 +54,26 @@ public class GardenMain {
         garden1.addPlant(flower2);
         garden1.addPlant(tree1);
         garden1.addPlant(tree2);
+        //garden1.addPlant(tree3);
 
         //plants.info();
         garden1.info();
-
+//        System.out.println(flower1.waterStatus);
+//        System.out.println(flower2.waterStatus);
+//        System.out.println(tree1.waterStatus);
+//        System.out.println(tree2.waterStatus);
+        garden1.waterGarden(40);
+//        System.out.println(flower1.waterStatus);
+//        System.out.println(flower2.waterStatus);
+//        System.out.println(tree1.waterStatus);
+//        System.out.println(tree2.waterStatus);
+        garden1.info();
+        garden1.waterGarden(70);
+//        System.out.println(flower1.waterStatus);
+//        System.out.println(flower2.waterStatus);
+//        System.out.println(tree1.waterStatus);
+//        System.out.println(tree2.waterStatus);
+        garden1.info();
     }
 
 }

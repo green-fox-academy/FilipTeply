@@ -5,13 +5,8 @@ import java.util.ArrayList;
 
 public class Flower extends Plant {
 
-    //    String color;
-//    double waterStatus;
-    int rootsNumber = 0;
-
     public Flower() {
         super();
-
     }
 
     public Flower(String color, double waterStatus) {
@@ -33,7 +28,7 @@ public class Flower extends Plant {
 
     @Override
     public boolean needsWater() {
-        if (this.waterStatus < 5) {
+        if (this.waterStatus < 5d) {
             return true;
         } else {
             return false;

@@ -2,20 +2,22 @@ package GardenApp;
 
 public class Tree extends Plant {
 
-    String color;
-    double waterStatus;
+//    cannot be here!!! If it is there, water status stays 0.0 even after watering
+//    String color;
+//    double waterStatus;
 
     public Tree() {
         super();
     }
 
     public Tree(String color, double waterStatus) {
-        this.color = color;
-        this.waterStatus = waterStatus;
+        super(color, waterStatus);
+//        this.color = color;
+//        this.waterStatus = waterStatus;
     }
 
     public boolean needsWater() {
-        if (this.waterStatus < 10) {
+        if (this.waterStatus < 10d) {
             return true;
         } else {
             return false;

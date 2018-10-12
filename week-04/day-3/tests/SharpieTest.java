@@ -5,10 +5,16 @@ import static org.junit.Assert.assertEquals;
 public class SharpieTest {
 
     Sharpie testsharpie = new Sharpie();
+    Sharpie testsharpie2 = new Sharpie("orange",21, 55);
 
     @Test
-    public void doesUseSharpie() {
-        assertEquals(99f, testsharpie.use(), 0.0001);
+    public void doesUseNonDefaultSharpie() {
+        assertEquals(54f, testsharpie2.useAndShowInk(), 0.0001);
+    }
+
+    @Test
+    public void doesUseDefaultSharpie() {
+        assertEquals(99f, testsharpie.useAndShowInk(), 0.0001);
     }
 
     @Test
@@ -16,6 +22,7 @@ public class SharpieTest {
         testsharpie.color = "blue";
         assertEquals("blue", testsharpie.color);
     }
+
 
     @Test
     public void whatWidthSharpie() {
@@ -31,9 +38,9 @@ public class SharpieTest {
 
     @Test
     public void whatInkAmountUsedSharpie() {
-        testsharpie.use();
-        testsharpie.use();
-        testsharpie.use();
+        testsharpie.useAndShowInk();
+        testsharpie.useAndShowInk();
+        testsharpie.useAndShowInk();
         assertEquals(97f, testsharpie.inkAmount, 0.0001);
     }
 }

@@ -14,6 +14,7 @@ public class GFAmain {
         people.add(mark);
         Person1 jane = new Person1();
         people.add(jane);
+        Person1 brian = new Person1 ("Brian", 33, "male");
         Student1 john = new Student1("John Doe", 20, "male", "BME");
         people.add(john);
         Student1 student = new Student1();
@@ -56,6 +57,8 @@ public class GFAmain {
         awesome.addStudent(student3);
         awesome.info();
         cloned.introduce();
+        brian.introduce();
+        brian.getGoal();
 
     }
 }

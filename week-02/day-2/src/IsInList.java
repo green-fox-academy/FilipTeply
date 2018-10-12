@@ -11,7 +11,7 @@ public class IsInList{
         // it should return "true" if it contains all, otherwise "false"
 
 
-        System.out.println(checkIfInList(list, 4,8,12,16));
+        System.out.println(checkIfInList(list, 4,8,13,16));
 
     }
 

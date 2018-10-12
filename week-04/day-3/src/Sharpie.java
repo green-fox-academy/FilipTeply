@@ -11,22 +11,22 @@ public class Sharpie {
 
     String color;
     float width;
-    float inkAmount = 100;
-    //?why not 100f required?
+    float inkAmount;
+
 
     public Sharpie() {
+        inkAmount = 100;
     }
 
     public Sharpie(String color, float width, float inkAmount) {
-        this(); //actually when this() must be used ??
         this.color = color;
         this.width = width;
         this.inkAmount = inkAmount;
     }
 
-    public float use() {
-        System.out.println("Using sharpie..." /*+ name*/);
-        inkAmount--;
+    public float useAndShowInk() {
+        System.out.println("Using sharpie...");
+        this.inkAmount--;
         return this.inkAmount;
     }
 
@@ -37,10 +37,10 @@ public class Sharpie {
         Sharpie sharpSharpie = new Sharpie();
         Sharpie bluntSharpie = new Sharpie("blue",33, 150);
 
-        sharpSharpie.use();
+        sharpSharpie.useAndShowInk();
         System.out.println(sharpSharpie.inkAmount);
-        bluntSharpie.use();
-        bluntSharpie.use();
+        bluntSharpie.useAndShowInk();
+        bluntSharpie.useAndShowInk();
         System.out.println(bluntSharpie.inkAmount);
         System.out.println(bluntSharpie.width);
 

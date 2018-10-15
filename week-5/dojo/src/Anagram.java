@@ -27,7 +27,7 @@ public class Anagram {
 //return value.replaceAll("[^A-Za-z0-9]", "");
         char[] tempArrayA = aWord.toCharArray();
         char[] tempArrayB = bWord.toCharArray();
-        
+
         Arrays.sort(tempArrayA);
         Arrays.sort(tempArrayB);
         return (Arrays.equals(tempArrayA, tempArrayB));

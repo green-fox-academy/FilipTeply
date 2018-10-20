@@ -21,9 +21,10 @@ public class PrintArguments {
         System.out.println(words.length);
         printParams(words);
 
-            }
 
-    public static void printParams(String[] params){
+    }
+
+    public static void printParams(String[] params) {
 
 
         for (int i = 0; i < params.length; i++) {

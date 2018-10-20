@@ -4,6 +4,7 @@ public abstract class StringedInstrument extends Instrument {
 
     private int numberOfStrings;
 
+
     public StringedInstrument(String name, int numberOfStrings) {
         super(name);
         this.numberOfStrings = numberOfStrings;

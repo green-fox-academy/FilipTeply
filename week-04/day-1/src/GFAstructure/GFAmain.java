@@ -62,3 +62,111 @@ public class GFAmain {
 
     }
 }
+
+//ArrayList<Book> shelfName = new ArrayList();
+
+
+//public static void main(String[] args) {
+
+
+
+
+
+// create an array of integers and add elements
+
+//        int[][] matrix1 = {{1, 2, 3}, {3, 4, 6}, {5, 2, 5}};
+//
+//        System.out.println(getAntiDiagonalAvg(matrix1));
+
+
+
+//    public double getAntiDiagonalAvg(int[][] matrix) {
+//
+//
+//        for (int i = 0; i < matrix.length; i++) {
+//            antiDiagSum += (matrix[i][ matrix.length - 1 - i]);
+//        }
+//
+//        System.out.println(antiDiagSum);
+//
+//        antiDiagAvg = (double) (antiDiagSum) / (double)(matrix.length);
+//        System.out.println();
+//
+//        return antiDiagAvg;
+//    }
+
+///////////////////////
+
+//antiDiagSum += (matrix.get(i + matrix.size() - 1 - i));
+//    int[][] arr = new int();
+//    int[] arr = Arrays.asList((1, 2, 3),(3, 4, 6),(5, 2, 5));
+//    int[][] arr = new int{{1, 2, 3},{3, 4, 6},{5, 2, 5}};
+//
+//    List list1 = Arrays.asList(a);
+//
+//
+//    arr1 = new Arrays.asList(1, 2, 3);
+//
+//    arr1 = [1, 2, 3]
+
+//    ArrayList<Integers> matrix1 = new ArrayList<Integers>();
+
+
+//package EndsWithS;
+//
+//
+//import java.nio.file.Files;
+//import java.nio.file.Path;
+//import java.nio.file.Paths;
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//public class EndsWithS {
+//
+//    /**
+//     * Create a method called `endsWithS` that takes a filename as a string
+//     * and returns the number of the words, that ends with 's'.
+//     * <p>
+//     * Example cases:
+//     * <p>
+//     * the correct output for the 'base.txt' is: 26
+//     * hint: Keep in mind that there may punctuation marks at the end of the words
+//     */
+//
+//    public static void main(String[] args) {
+//
+//        String filename = "C:\\Users\\TeplyF\\greenfox\\prg-vulpes-basic-exam\\src\\EndsWithS\\base.txt";
+//        System.out.println(endsWithS(filename));
+//
+//    }
+//
+//    public static int endsWithS(String filename) {
+//        int count = 0;
+//
+//        try {
+//            Path myPath = Paths.get(filename);
+//            List<String> lines = Files.readAllLines(myPath);
+//
+//
+//            for (int i = 0; i < lines.size(); i++) {
+//
+//                //String line = new String();
+//                String lineIinLowerCase = lines.get(i).toLowerCase();
+//                //String lineWithoutNonLetterChars = lineIinLowerCase.replaceAll("[^a-z]", "");
+//                String[] words = lineIinLowerCase.split(" ");
+//
+//                for (int j = 0; j < words.length; j++) {
+//                    if (words[j].replaceAll("[^a-z]", "").endsWith("s")) {
+//                        count++;
+//                    }
+//                }
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return count;
+//    }
+//
+//
+//}

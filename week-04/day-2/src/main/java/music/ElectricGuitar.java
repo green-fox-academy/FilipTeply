@@ -5,6 +5,7 @@ public class ElectricGuitar extends StringedInstrument {
     //Electric Guitar (6 strings, "Twang")
     //String sound;
 
+
     public ElectricGuitar() {
         this(6);
         //why not?

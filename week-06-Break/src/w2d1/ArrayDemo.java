@@ -39,5 +39,6 @@ public class ArrayDemo {
         System.out.println("Printing new array arr3:");
         System.out.println(Arrays.toString(arr3));
 
+        int[] arr4 = Arrays.copyOf(arr1,5);
     }
 }

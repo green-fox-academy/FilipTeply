@@ -1,3 +1,5 @@
+package Cuboid;
+
 public class Cuboid {
 
     // Write a program that stores 3 sides of a cuboid as variables (doubles)

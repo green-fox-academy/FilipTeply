@@ -4,7 +4,7 @@
 
 <h3> Filip's repository at Green-Fox-Academy</h3>
 <h4>Prague Vulpes cohort</h4>
-<h4>September-February 2018</h4>
+<h4>September 2018 - February 2019</h4>
 --------------
 
 <h4>Links</h4>

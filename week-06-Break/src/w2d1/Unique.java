@@ -12,14 +12,14 @@ public class Unique {
 
         //  Example
         System.out.println(unique(new int[]{1, 11, 34, 11, 52, 61, 1, 34}));
-
         //  should print: `[1, 11, 34, 52, 61]`
 
-        //int[] arr = new int[]{1, 11, 34, 11, 52, 61, 1, 34};
-
         System.out.println(unique(new int[]{1, 11, 34, 11, 52, 61, 1, 34, 2, 2}));
+        //prints [1, 2, 11, 34, 52, 61]
 
         System.out.println(uniqueInNumberSeries(1, 11, 34, 11, 52, 61, 1, 34, 1, 1, 1, 1));
+        //prints [1, 11, 34, 52, 61]
+
     }
 
     public static ArrayList uniqueInNumberSeries(Integer... numbers) {

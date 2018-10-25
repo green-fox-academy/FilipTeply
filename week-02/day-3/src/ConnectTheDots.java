@@ -1,9 +1,9 @@
 
 import javax.swing.*;
 
-        import java.awt.*;
+import java.awt.*;
 
-        import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class ConnectTheDots {
     public static void mainDraw(Graphics graphics) {
@@ -14,32 +14,35 @@ public class ConnectTheDots {
         // Connect these: {{50, 100}, {70, 70}, {80, 90}, {90, 90}, {100, 70},
         // {120, 100}, {85, 130}, {50, 100}}
 
-        int[][] dots = {{10, 10}, {290,  10}, {290, 290}, {10, 290}};
+        int[][] dots = {{10, 10}, {290, 10}, {290, 290}, {10, 290}};
         int[][] dots2 = {{50, 100}, {70, 70}, {80, 90}, {90, 90}, {100, 70}, {120, 100}, {85, 130}, {50, 100}};
 
         connectDotsFunction(graphics, dots);
-
+        connectDotsFunction(graphics, dots2);
     }
 
 
-    public static void connectDotsFunction(Graphics gra, int[][] a){
+    public static void connectDotsFunction(Graphics gra, int[][] a) {
         gra.setColor(Color.BLACK);
         int x1;
         int x2;
         int y1;
         int y2;
 
-        for (int i = 0; i < a.length-1; i++) {
+        for (int i = 0; i < a.length - 1; i++) {
 
-                x1 = a[i][0];
-                y1 = a[i][1];
+            x1 = a[i][0];
+            y1 = a[i][1];
 
-                x2 = a[i + 1][0];
-                y2 = a[i + 1][1];
-                gra.drawLine(x1, y1, x2, y2);
+            x2 = a[i + 1][0];
+            y2 = a[i + 1][1];
+            gra.drawLine(x1, y1, x2, y2);
+
+            if (i == (a.length - 2)) {
+                gra.drawLine(x2, y2, a[0][0], a[0][1]);
+            }
 
         }
-
 
 
     }

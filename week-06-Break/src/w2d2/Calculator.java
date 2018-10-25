@@ -30,36 +30,39 @@ public class Calculator {
         System.out.println("Please type in the expression:");
         Scanner myScanner = new Scanner(System.in);
         String calcInput = myScanner.nextLine();
-        //String calcInput = "+ 3 4";
 
-        //splits one line String input to array of Strings
+
+        //splits one-line String input to array of Strings
         String[] arrInput = calcInput.split(" ");
 
         System.out.println(Arrays.toString(arrInput));
 
-        // extracts first and second number from one line input: "* 5 4"
+
         double firstNumber = (double) Integer.parseInt(arrInput[1]);
         double secondNumber = (double) Integer.parseInt(arrInput[2]);
 
-        if (arrInput[0] == "+") {
+        if (arrInput[0].equals("+")) {
             System.out.println(firstNumber + secondNumber);
         }
 
-        if (arrInput[0] == "-") {
+        if (arrInput[0].equals("-")) {
             System.out.println(firstNumber - secondNumber);
         }
 
-        if (arrInput[0] == "*") {
+        if (arrInput[0].equals("*")) {
             System.out.println(firstNumber * secondNumber);
         }
 
-        if (arrInput[0] == "/") {
+        if (arrInput[0].equals("/")) {
             System.out.println(firstNumber / secondNumber);
         }
 
-        if (arrInput[0] == "%") {
+        if (arrInput[0].equals("%")) {
             System.out.println(firstNumber % secondNumber);
         }
+
+        //How to exit the program?
+        //System.exit(0);
 
     }
 }

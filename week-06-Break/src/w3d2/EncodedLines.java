@@ -1,5 +1,8 @@
 package w3d2;
 
+import w2d1.Array;
+import w3d3.Animal;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,7 +22,7 @@ public class EncodedLines {
         saveIntoFile(targetFileNameWithPath, decodeLines(openTxtFileAndGetLinesAsArrayList(filename)));
     }
 
-    public static ArrayList openTxtFileAndGetLinesAsArrayList(String filename) {
+    public static ArrayList<String> openTxtFileAndGetLinesAsArrayList(String filename) {
         List<String> lines = new ArrayList<>();
         try {
             Path myPath = Paths.get(filename);
@@ -27,19 +30,23 @@ public class EncodedLines {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return (ArrayList) lines;
+        return (ArrayList<String>) lines;
     }
 
-    public static ArrayList decodeLines(ArrayList<String> lines) {
+    public static ArrayList<String> decodeLines(ArrayList<String> lines) {
         ArrayList<String> decodedLines = new ArrayList<>();
-        String decodingEcodingString = new String("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[./*+!\"'(-.");
+        String decodingEncodingString = new String("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[./*+!\"'(-.");
 
         for (int i = 0; i < lines.size(); i++) {
             StringBuilder sb = new StringBuilder(lines.get(i));
             StringBuilder decodedSb = new StringBuilder();
 
-            for (int j = 1; j < sb.length() + 1; i++) {
-                decodedSb.append(decodingEcodingString.charAt(decodingEcodingString.indexOf(sb.charAt(j)) - 1));
+            for (int j = 0; j < sb.length() + 1; i++) {
+                if (sb.charAt(j) != ' ' || sb.charAt(j) != 'a') {
+                    decodedSb.append(decodingEncodingString.charAt(decodingEncodingString.indexOf(sb.charAt(j)) - 1));
+                } else {
+                    decodedSb.append(" ");
+                }
             }
             decodedLines.add(i, decodedSb.toString());
         }

@@ -17,9 +17,10 @@ public class Animal {
     boolean alive;
 
     public Animal() {
-        hunger = 50;
-        thirst = 50;
-        alive = true;
+        this.hunger = 50;
+        this.thirst = 50;
+        this.alive = true;
+        System.out.println("Constructor of Animal has been called");
     }
 
     public Animal(String name) {
@@ -37,7 +38,7 @@ public class Animal {
     public void eat() {
         if (alive) {
             this.hunger--;
-            System.out.println(this.name+ " is eating...");
+            System.out.println(this.name + " is eating...");
             // ? System.out.println( /*this.animal +*/ "\"I have just eaten and my new hunger value is: " + this.hunger + "\"");
         } else {
             System.out.println("Dead cannot drink.");

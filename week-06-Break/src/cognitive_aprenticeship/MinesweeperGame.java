@@ -29,6 +29,7 @@ public class MinesweeperGame {
         setAllFieldsAsNonVisited();
         drawUnveiledBoard();
         generateMinesNeighbourCounts();
+        drawUnveiledBoard();
 
         while (true) {
             int testy;
@@ -36,13 +37,15 @@ public class MinesweeperGame {
             System.out.println("Give me coordinates y\\x you want to explore.");
             Scanner scanner = new Scanner(System.in);
             String testedCoordinates = scanner.nextLine();
-            testy = (Integer.parseInt(testedCoordinates.substring(0,1)));
+            testy = (Integer.parseInt(testedCoordinates.substring(0, 1)));
             testx = (Integer.parseInt(testedCoordinates.substring(2)));
-            System.out.println("Tested coordinates y\\x are: " + testy +"\\"+testx);
+            System.out.println("Tested coordinates y\\x are: " + testy + "\\" + testx);
             numberOfGuesses++;
 
+            visitField(testy, testx);
             if (boardValue[testy][testx] == 9) {
                 System.out.println("Booooooooooom! Game is over.");
+                drawBoard();
                 break;
             }
 
@@ -50,7 +53,7 @@ public class MinesweeperGame {
                 System.out.println("You successfully located all mines. Congratulations!");
                 break;
             }
-            visitField(testy, testx);
+
             drawBoard();
         }
     }
@@ -119,7 +122,37 @@ public class MinesweeperGame {
 
 
     public static void generateMinesNeighbourCounts() {
-        
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if (boardValue[i][j] != 9) {
+                    if (i > 0 && j > 0 && boardValue[i - 1][j - 1] == 9) {
+                        boardValue[i][j]++;
+                    }
+                    if (i > 0 && boardValue[i - 1][j] == 9) {
+                        boardValue[i][j]++;
+                    }
+                    if (i > 0 && j < (SIZE - 1) && boardValue[i - 1][j + 1] == 9) {
+                        boardValue[i][j]++;
+                    }
+                    if (j > 0 && boardValue[i][j - 1] == 9) {
+                        boardValue[i][j]++;
+                    }
+                    if (j < (SIZE - 1) && boardValue[i][j + 1] == 9) {
+                        boardValue[i][j]++;
+                    }
+                    if (i < (SIZE - 1) && j > 0 && boardValue[i + 1][j - 1] == 9) {
+                        boardValue[i][j]++;
+                    }
+                    if (i < (SIZE - 1) && boardValue[i + 1][j] == 9) {
+                        boardValue[i][j]++;
+                    }
+                    if (i < (SIZE - 1) && j < (SIZE - 1) && boardValue[i + 1][j + 1] == 9) {
+                        boardValue[i][j]++;
+                    }
+                }
+            }
+        }
+
 
     }
 
@@ -145,7 +178,7 @@ public class MinesweeperGame {
             System.out.println("You have already visited this field.");
         } else if (!visitedField[y][x]) {
             visitedField[y][x] = true;
-            System.out.println("Field now visited: " + y + ","+x);
+            System.out.println("Field now visited: " + y + "," + x);
         }
     }
 

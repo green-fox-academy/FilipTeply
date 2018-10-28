@@ -43,19 +43,24 @@ public class MinesweeperGame {
             numberOfGuesses++;
 
             visitField(testy, testx);
-            if (boardValue[testy][testx] == 9) {
-                System.out.println("Booooooooooom! Game is over.");
-                drawBoard();
-                break;
-            }
 
             if (numberOfGuesses == (SIZE * SIZE - NUMBEROfMINES - 1)) {
+                drawUnveiledBoard();
                 System.out.println("You successfully located all mines. Congratulations!");
                 break;
             }
 
+            if (boardValue[testy][testx] == 9) {
+                drawUnveiledBoard();
+                drawBoard();
+                System.out.println("Booooooooooom! Game is over.");
+                break;
+            }
+            revealNeighboursOfZeroFields(testy, testx);
             drawBoard();
         }
+
+
     }
 
 
@@ -152,9 +157,64 @@ public class MinesweeperGame {
                 }
             }
         }
-
-
     }
+
+    public static int revealNeighboursOfZeroFields(int y, int x) {
+
+        if (boardValue[y][x] == 0) {
+
+            if (y > 0 && x > 0) {
+                visitField(y - 1, x - 1);
+//                if (y - 1 > 0 && x - 1 > 0 && boardValue[y - 1][x - 1] == 0) {
+//                    return revealNeighboursOfZeroFields(y - 1, x - 1);
+//                }
+            }
+            if (y > 0) {
+                visitField(y - 1, x);
+//                if (boardValue[y - 1][x] == 0) {
+//                    return revealNeighboursOfZeroFields(y - 1, x);
+//                }
+            }
+            if (y > 0 && x < (SIZE - 1)) {
+                visitField(y - 1, x + 1);
+//                if (boardValue[y - 1][x + 1] == 0) {
+//                    return revealNeighboursOfZeroFields(y - 1, x + 1);
+//                }
+            }
+            if (x > 0) {
+                visitField(y, x - 1);
+//                if (boardValue[y][x - 1] == 0) {
+//                    return revealNeighboursOfZeroFields(y, x - 1);
+//                }
+            }
+            if (x < (SIZE - 1)) {
+                visitField(y, x + 1);
+//                if (boardValue[y][x + 1] == 0) {
+//                    return revealNeighboursOfZeroFields(y, x + 1);
+//                }
+            }
+            if (y < (SIZE - 1) && x > 0) {
+                visitField(y + 1, x - 1);
+//                if (boardValue[y + 1][x - 1] == 0) {
+//                    return revealNeighboursOfZeroFields(y + 1, x - 1);
+//                }
+            }
+            if (y < (SIZE - 1)) {
+                visitField(y + 1, x);
+//                if (boardValue[y + 1][x] == 0) {
+//                    return revealNeighboursOfZeroFields(y + 1, x);
+//                }
+            }
+            if (y < (SIZE - 1) && x < (SIZE - 1)) {
+                visitField(y + 1, x + 1);
+//                if (y + 1 < (SIZE - 1) && x + 1 < (SIZE - 1) && boardValue[y + 1][x + 1] == 0) {
+//                    return revealNeighboursOfZeroFields(y + 1, x + 1);
+//                }
+            }
+        }
+        return 1;
+    }
+
 
     public static void setAllFieldsAsNonVisited() {
         for (int i = 0; i < SIZE; i++) {
@@ -165,18 +225,19 @@ public class MinesweeperGame {
         System.out.println("All fields set as visitedField[i][j] = false ");
     }
 
-    public static Object showBoardField(int y, int x) {
-        if (visitedField[y][x]) {
-            return boardValue[y][x];
-        } else {
-            return 'X';
-        }
-    }
+//    public static Object showBoardField(int y, int x) {
+//        if (visitedField[y][x]) {
+//            return boardValue[y][x];
+//        } else {
+//            return 'X';
+//        }
+//    }
 
     public static void visitField(int y, int x) {
-        if (visitedField[y][x]) {
-            System.out.println("You have already visited this field.");
-        } else if (!visitedField[y][x]) {
+//        if (visitedField[y][x]) {
+//            System.out.println("You have already visited this field.");
+//        }
+        if (!visitedField[y][x]) {
             visitedField[y][x] = true;
             System.out.println("Field now visited: " + y + "," + x);
         }

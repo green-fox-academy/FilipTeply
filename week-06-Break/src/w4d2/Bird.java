@@ -48,12 +48,12 @@ public class Bird extends Animal implements Flyable {
 
     public static void main(String[] args) {
 
-        Animal bird1 = new Bird("Eaglie");
-        ((Bird) bird1).hop();
-        ((Bird) bird1).fly();
+       // Animal bird1 = new Bird("Eaglie");
+        //((Bird) bird1).hop();
+        //((Bird) bird1).fly();
 
-        Bird bird2 = new Bird("Hawkie");
-        bird2.fly();
+        //Bird bird2 = new Bird("Hawkie");
+        //bird2.fly();
         //System.out.println(bird1.
 
         //System.out.println(bird.name);

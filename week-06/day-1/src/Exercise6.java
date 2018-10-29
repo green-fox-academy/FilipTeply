@@ -22,6 +22,8 @@ public class Exercise6 {
 
         System.out.println(citiesStartingAendingI);
 
+
+
     }
 
 }

@@ -165,51 +165,51 @@ public class MinesweeperGame {
 
             if (y > 0 && x > 0) {
                 visitField(y - 1, x - 1);
-//                if (y - 1 > 0 && x - 1 > 0 && boardValue[y - 1][x - 1] == 0) {
-//                    return revealNeighboursOfZeroFields(y - 1, x - 1);
-//                }
+                if (y - 1 > 0 && x - 1 > 0 && boardValue[y - 1][x - 1] == 0) {
+                    return revealNeighboursOfZeroFields(y - 1, x - 1);
+                }
             }
             if (y > 0) {
                 visitField(y - 1, x);
-//                if (boardValue[y - 1][x] == 0) {
-//                    return revealNeighboursOfZeroFields(y - 1, x);
-//                }
+                if (boardValue[y - 1][x] == 0) {
+                    return revealNeighboursOfZeroFields(y - 1, x);
+                }
             }
             if (y > 0 && x < (SIZE - 1)) {
                 visitField(y - 1, x + 1);
-//                if (boardValue[y - 1][x + 1] == 0) {
-//                    return revealNeighboursOfZeroFields(y - 1, x + 1);
-//                }
+                if (boardValue[y - 1][x + 1] == 0) {
+                    return revealNeighboursOfZeroFields(y - 1, x + 1);
+                }
             }
             if (x > 0) {
                 visitField(y, x - 1);
-//                if (boardValue[y][x - 1] == 0) {
-//                    return revealNeighboursOfZeroFields(y, x - 1);
-//                }
+                if (boardValue[y][x - 1] == 0) {
+                    return revealNeighboursOfZeroFields(y, x - 1);
+                }
             }
             if (x < (SIZE - 1)) {
                 visitField(y, x + 1);
-//                if (boardValue[y][x + 1] == 0) {
-//                    return revealNeighboursOfZeroFields(y, x + 1);
-//                }
+                if (boardValue[y][x + 1] == 0) {
+                    return revealNeighboursOfZeroFields(y, x + 1);
+                }
             }
             if (y < (SIZE - 1) && x > 0) {
                 visitField(y + 1, x - 1);
-//                if (boardValue[y + 1][x - 1] == 0) {
-//                    return revealNeighboursOfZeroFields(y + 1, x - 1);
-//                }
+                if (boardValue[y + 1][x - 1] == 0) {
+                    return revealNeighboursOfZeroFields(y + 1, x - 1);
+                }
             }
             if (y < (SIZE - 1)) {
                 visitField(y + 1, x);
-//                if (boardValue[y + 1][x] == 0) {
-//                    return revealNeighboursOfZeroFields(y + 1, x);
-//                }
+                if (boardValue[y + 1][x] == 0) {
+                    return revealNeighboursOfZeroFields(y + 1, x);
+                }
             }
             if (y < (SIZE - 1) && x < (SIZE - 1)) {
                 visitField(y + 1, x + 1);
-//                if (y + 1 < (SIZE - 1) && x + 1 < (SIZE - 1) && boardValue[y + 1][x + 1] == 0) {
-//                    return revealNeighboursOfZeroFields(y + 1, x + 1);
-//                }
+                if (y + 1 < (SIZE - 1) && x + 1 < (SIZE - 1) && boardValue[y + 1][x + 1] == 0) {
+                    return revealNeighboursOfZeroFields(y + 1, x + 1);
+                }
             }
         }
         return 1;

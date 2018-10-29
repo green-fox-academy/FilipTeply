@@ -19,7 +19,6 @@ public class Exercise8 {
 
         System.out.println(frequencyOfNumbers);
 
-        Map<Integer, Long> frequencyOfNumbers = numbers.stream() .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
 
     }
 

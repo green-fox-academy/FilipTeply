@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -8,116 +9,52 @@ import java.util.List;
 public class TaskList {
 
     List<Task> taskList;
-    //int lineNumber;
-
     String taskListFileName;
 
     public TaskList(String taskListFileName) {
         this.taskListFileName = taskListFileName;
         this.taskList = new ArrayList<>();
+        createFile(taskListFileName);
     }
 
-
     public void addNewTask(String arg1) {
-        List<String> lines1 = new ArrayList<>();
-        lines1 = readTaskListFile(taskListFileName);
+
+        List<String> lines1;
+        lines1 = readTaskListFile();
         lines1.add("[ ] " + arg1);
         saveTaskListIntoFile(lines1);
     }
 
-    public void removeTask(String arg1, String taskListFileName) {
-
-        openFile(this.taskListFileName).add("[ ] " + arg1);
-        saveTaskListIntoFile(taskListName, openFile(this.taskListFileName));
-        int taskNumber;
-        //stackOverflow search how to cast String args[]
-        //replace the first argument here with: String arg1
-        //taskNumber = (int)(arg1);
-        List<String> lines1 = new ArrayList<>();
-        //List<String> newlines = new ArrayList<>();
-        Path myPath1 = Paths.get(taskListFileName);
-
-        try {
-            lines1 = Files.readAllLines(myPath1);
-            lines1.remove(Integer.parseInt(arg1) - 1);
-
-            Files.write(myPath1, lines1);
-
-            //System.out.println(lines1);
-
-        } catch (
-                IOException e) {
-            e.printStackTrace();
-            System.out.println("IOException");
-        }
-
+    public void removeTask(String arg1) {
+        List<String> lines1;
+        lines1 = readTaskListFile();
+        lines1.remove(Integer.parseInt(arg1) - 1);
+        saveTaskListIntoFile(lines1);
     }
 
-
-    public void listAllTasks(String filename) {
-
-        List<String> lines1 = new ArrayList<>();
-        Path myPath1 = Paths.get(filename);
-
-        try {
-            lines1 = Files.readAllLines(myPath1);
-
-        } catch (
-                IOException e) {
-            e.printStackTrace();
-            System.out.println("IOException");
-        }
-
+    public void listAllTasks() {
+        List<String> lines1;
+        lines1 = readTaskListFile();
         int i = 1;
         for (String itemline : lines1) {
-
-
             System.out.println(i + " - " + itemline);
             i++;
-
         }
     }
 
-
-    public List<String> readTaskListFile(String taskListFileName) {
-
+    public List<String> readTaskListFile() {
         List<String> lines1 = new ArrayList<>();
         Path myPath1 = Paths.get(taskListFileName);
-
         try {
             lines1 = Files.readAllLines(myPath1);
-
         } catch (
                 IOException e) {
             System.out.println("IOException");
         }
-
-        // System.out.println(lines1);
         return lines1;
     }
 
-
-//    public void opensFileAndPrint(String filename) {
-//
-//        List<String> lines1 = new ArrayList<>();
-//        Path myPath1 = Paths.get(filename);
-//
-//        try {
-//            lines1 = Files.readAllLines(myPath1);
-//
-//        } catch (
-//                IOException e) {
-//            System.out.println("IOException");
-//        }
-//
-//        for (String itemline : lines1) {
-//            System.out.println(itemline);
-//        }
-//    }
-
-
     public void saveTaskListIntoFile(List lines) {
-
         try {
             Path myPath = Paths.get(taskListFileName);
             Files.write(myPath, lines);
@@ -126,5 +63,17 @@ public class TaskList {
         }
     }
 
+    public static void createFile(String filename3) {
+        try {
+            File file = new File(filename3);
+            if (file.createNewFile()) {
+                System.out.println("File creation successfull");
+            } else {
+                System.out.println("Error while creating File, file already exists in specified path");
+            }
+        } catch (IOException io) {
+            io.printStackTrace();
+        }
+    }
 
 }

@@ -120,7 +120,7 @@
 //    {
 //        private ArrayList colors;
 //        private JComponent component;
-//        private Timer timer;
+//        private BarTimer timer;
 //        private int alpha;
 //        private int increment;
 //
@@ -129,7 +129,7 @@
 //            this.colors = colors;
 //            this.component = component;
 //            component.addFocusListener( this );
-//            timer = new Timer(interval, this);
+//            timer = new BarTimer(interval, this);
 //        }
 //
 //        public void focusGained(FocusEvent e)

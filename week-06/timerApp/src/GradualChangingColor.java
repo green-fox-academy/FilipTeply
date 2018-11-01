@@ -19,7 +19,7 @@
 //
 //        frame.setVisible(true);
 //
-//        final Timer timer = new Timer(50, new ActionListener() {
+//        final BarTimer timer = new BarTimer(50, new ActionListener() {
 //            @Override
 //            public void actionPerformed(ActionEvent evt) {
 //                final Color targetColor = new Color(30,40,50);
@@ -40,7 +40,7 @@
 //                // step 3
 //                double norm = Math.sqrt(dr*dr+dg*dg+db*db);
 //                if (norm < .001) {
-//                    ((Timer)(evt.getSource())).stop();
+//                    ((BarTimer)(evt.getSource())).stop();
 //                    return;
 //                }
 //                dr /= norm;

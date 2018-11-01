@@ -72,7 +72,7 @@ public class DrawPanel extends JPanel{
 //          }
 //      };
 //
-//      Timer t = new Timer(500, action);
+//      BarTimer t = new BarTimer(500, action);
 //      t.setRepeats(true);
 //      t.setInitialDelay(0);
 //      t.start();

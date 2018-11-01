@@ -1,18 +1,31 @@
 /*created by Filip @GFA course week4/day4&5 (11.&12.10.2018)*/
 
-import java.util.Arrays;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Main {
 
 
     public static void main(String[] args) {
 
-        ToDo todo1 = new ToDo();
+        TaskList taskList1 = new TaskList();
+        //List<Task> taskList1 = new ArrayList<>();
+
 
         String filename1 = "C:/Users/TeplyF/greenfox/TODOAppWeek4_day4and5/todo-app/src/todoList.txt";
         String filename2 = "C:/Users/TeplyF/greenfox/TODOAppWeek4_day4and5/todo-app/src/emptyTodoList.txt";
+        String filename3 = "C:/Users/TeplyF/greenfox/TODOAppWeek4_day4and5/todo-app/src/todoList2.txt";
 
-        String activeFilename = filename2;
+
+        //createFile(filename3);
+
+        String activeFilename = filename1;
 
         //testing function openFile()
         //todo1.openFile("src/todoList.txt");
@@ -23,7 +36,7 @@ public class Main {
         //testing function
         //todo1.openFileAndPrintWithLineNumbers("src/todoList.txt");
 
-        //functionalities expected from class ToDo  are:
+        //functionalities expected from class Task  are:
         // -l   Lists all the tasks
         // -a   Adds a new task
         // -r   Removes an task
@@ -32,7 +45,6 @@ public class Main {
 
         //prints array of String of arguments
         //System.out.println(Arrays.toString(args));
-
 
 
         if (args.length == 0) {
@@ -50,11 +62,11 @@ public class Main {
             // if there are no tasks it prints  "No todos for today! :)"
         } else if (args[0].equals("-l")) {
 
-            if (todo1.openFile(activeFilename).size() == 0) {
+            if (taskList1.openFile(activeFilename).size() == 0) {
                 System.out.println("No todos for today! :)");
 
             } else {
-                todo1.listAllTasks(activeFilename);
+                taskList1.listAllTasks(activeFilename);
             }
         }
         //checks if new task after argument -a has been filled
@@ -64,7 +76,7 @@ public class Main {
             if (args.length == 1) {
                 System.out.println("Unable to add: no task provided.");
             } else {
-                todo1.addNewTask(args[1], activeFilename);
+                taskList1.addNewTask(args[1], activeFilename);
             }
 
             //removes tasks
@@ -76,7 +88,7 @@ public class Main {
 //        at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
 //        at java.lang.Integer.parseInt(Integer.java:580)
 //        at java.lang.Integer.parseInt(Integer.java:615)
-//        at ToDo.removeTask(ToDo.java:47)
+//        at Task.removeTask(Task.java:47)
 //        at Main.main(Main.java:79)
 
             //to be done: handle situation if arg is: -r apple
@@ -85,13 +97,14 @@ public class Main {
                 if (args.length == 1) {
                     System.out.println("Unable to remove: no index provided");
                 } else {
-                    todo1.removeTask(args[1], filename1);
+                    taskList1.removeTask(args[1], filename1);
                 }
 
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("Unable to remove: index is out of bound");
             }
         }
+
 
         // else {
 //                //System.out.println("Unable to remove: index is not a number");
@@ -101,11 +114,28 @@ public class Main {
         else if (args[0].equals("-c")) {
 
             try {
-                todo1.checkItem(args[1], activeFilename);
+                taskList1.checkTask(args[1], activeFilename);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
     }
+
+    public static void createFile(String targetFilenameWithPath) {
+        try {
+            File file = new File(targetFilenameWithPath);
+            if (file.createNewFile()) {
+                System.out.println("File creation successfull");
+            } else {
+                System.out.println("Error while creating File, file already exists in specified path");
+            }
+        } catch (IOException io) {
+            io.printStackTrace();
+        }
+    }
+
+
+
+
 }

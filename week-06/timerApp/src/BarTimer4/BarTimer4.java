@@ -5,10 +5,8 @@ import java.awt.event.ActionListener;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class BarTimer5 {
+public class BarTimer4 {
 
-
-    // Don't touch the code below
     static int WIDTH = 320;
     static int HEIGHT = 343;
 
@@ -21,27 +19,21 @@ public class BarTimer5 {
         jFrame.setLocationRelativeTo(null);
         jFrame.setVisible(true);
         jFrame.pack();
-
     }
 
     static class ImagePanel extends JPanel implements ActionListener {
-
         Timer t = new Timer(100, this);
         double x = 0;
         double y = 0;
 
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
-
             t.start();
-
-            System.out.println();
 
             int[] colorGreen = {0, 153, 0};
             int[] colorBlue = {51, 153, 255};
             int[] colorOrange = {255, 153, 0};
             int[] colorRed = {255, 51, 51};
-
 
             graphics.setColor(new Color(colorGreen[0], colorGreen[1], colorGreen[2]));
             graphics.fillRect((int) x, (int) y, 480, (int) (1005.0 - y));
@@ -61,8 +53,6 @@ public class BarTimer5 {
             this.repaint();
         }
     }
-
-
 }
 
 

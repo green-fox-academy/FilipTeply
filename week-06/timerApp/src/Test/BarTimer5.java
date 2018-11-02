@@ -5,9 +5,10 @@
 //
 //import static javax.swing.JFrame.EXIT_ON_CLOSE;
 //
-//public class BarTimer4 {
+//public class BarTimer5 {
 //
-//    static int sec = 60;
+//
+//
 //    // Don't touch the code below
 //    static int WIDTH = 320;
 //    static int HEIGHT = 343;
@@ -22,7 +23,6 @@
 //        jFrame.setVisible(true);
 //        jFrame.pack();
 //
-//
 //    }
 //
 //    static class ImagePanel extends JPanel implements ActionListener {
@@ -31,11 +31,12 @@
 //        double x = 0;
 //        double y = 0;
 //
-//
 //        protected void paintComponent(Graphics graphics) {
 //            super.paintComponent(graphics);
 //
 //            t.start();
+//
+//            System.out.println();
 //
 //            int[] colorGreen = {0, 153, 0};
 //            int[] colorBlue = {51, 153, 255};
@@ -43,20 +44,39 @@
 //            int[] colorRed = {255, 51, 51};
 //
 //
+////            graphics.setColor(new Color(colorGreen[0], colorGreen[1], colorGreen[2]));
+////            graphics.fillRect((int) x, (int) y, 480, (int) (1005.0 - y));
+////
+////            graphics.setColor(new Color(colorBlue[0], colorBlue[1], colorBlue[2]));
+////            graphics.fillRect((int) x + 480, (int) (-1005 + y), 480, (int) (2010.0 - y));
+////
+////            graphics.setColor(new Color(colorOrange[0], colorOrange[1], colorOrange[2]));
+////            graphics.fillRect((int) x + 960, (int) (-2010 + y), 480, (int) (3015.0 - y));
+////
+////            graphics.setColor(new Color(colorRed[0], colorRed[1], colorRed[2]));
+////            graphics.fillRect((int) x + 1440, (int) (-3015 + y), 480, (int) (4020.0 - y));
 //
 //
 //            graphics.setColor(new Color(colorGreen[0], colorGreen[1], colorGreen[2]));
-//            graphics.fillRect((int) x, (int) y, 480, (int) (1005.0 - y));
+//            graphics.fillRect((int) x+200, (int) y+400, 48, (int) (100.50 - y));
 //
 //            graphics.setColor(new Color(colorBlue[0], colorBlue[1], colorBlue[2]));
-//            graphics.fillRect((int) x + 480, (int) (-1005 + y), 480, (int) (2010.0 - y));
+//            graphics.fillRect((int) x + 48+200, (int) (-100.5 + y+400), 48, (int) (201.0 - y));
 //
 //            graphics.setColor(new Color(colorOrange[0], colorOrange[1], colorOrange[2]));
-//            graphics.fillRect((int) x + 960, (int) (-2010 + y), 480, (int) (3015.0 - y));
+//            graphics.fillRect((int) x + 96+200, (int) (-201.0 + y+400), 48, (int) (301.0 - y));
 //
 //            graphics.setColor(new Color(colorRed[0], colorRed[1], colorRed[2]));
-//            graphics.fillRect((int) x + 1440, (int) (-3015 + y), 480, (int) (4020.0 - y));
+//            graphics.fillRect((int) x + 144+200, (int) (-301.5 + y+400), 48, (int) (402.0 - y));
+//
+//
+//
 //        }
+//
+//
+//
+//
+//
 //
 //        public void actionPerformed(ActionEvent e) {
 //            y += 1005.0 / 600.0;

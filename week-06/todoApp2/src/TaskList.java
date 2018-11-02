@@ -25,19 +25,7 @@ public class TaskList {
         saveTaskListIntoFile(lines1);
     }
 
-    public void checkTask (String arg1){
-        List<String> lines1 = new ArrayList<>();
-        Path myPath1 = Paths.get(taskListFileName);
-        try {
-            lines1 = Files.readAllLines(myPath1);
-            lines1.set(Integer.parseInt(arg1) - 1, "[x] " + (lines1.get(Integer.parseInt(arg1) - 1)).substring(4));
-            Files.write(myPath1, lines1);
-        } catch (
-                IOException e) {
-            e.printStackTrace();
-            System.out.println("IOException");
-        }
-    }
+
 
     public void removeTask(String arg1) {
         List<String> lines1;

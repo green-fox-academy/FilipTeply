@@ -1,3 +1,5 @@
+package BarTimer4;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -22,34 +24,45 @@ public class BarTimer4 {
     }
 
     static class ImagePanel extends JPanel implements ActionListener {
-        Timer t = new Timer(100, this);
+
         double x = 0;
         double y = 0;
+        double offsetX = 480.0;
+        double width = offsetX;
+        double height = 1005.0;
+
+        Timer t = new Timer(100, this);
 
         protected void paintComponent(Graphics graphics) {
+
             super.paintComponent(graphics);
             t.start();
 
             int[] colorGreen = {0, 153, 0};
-            int[] colorBlue = {51, 153, 255};
-            int[] colorOrange = {255, 153, 0};
-            int[] colorRed = {255, 51, 51};
 
             graphics.setColor(new Color(colorGreen[0], colorGreen[1], colorGreen[2]));
-            graphics.fillRect((int) x, (int) y, 480, (int) (1005.0 - y));
+
+            graphics.fillRect((int) x, (int) y, (int) width, (int) (height - y));
+
+            int[] colorBlue = {51, 153, 255};
 
             graphics.setColor(new Color(colorBlue[0], colorBlue[1], colorBlue[2]));
-            graphics.fillRect((int) x + 480, (int) (-1005 + y), 480, (int) (2010.0 - y));
+
+            graphics.fillRect((int) (x + offsetX), (int) (-height + y), (int) width, (int) (2 * height - y));
+
+            int[] colorOrange = {255, 153, 0};
 
             graphics.setColor(new Color(colorOrange[0], colorOrange[1], colorOrange[2]));
-            graphics.fillRect((int) x + 960, (int) (-2010 + y), 480, (int) (3015.0 - y));
+            graphics.fillRect((int) (x + offsetX * 2), (int) (-2 * height + y), (int) width, (int) (3 * height - y));
+
+            int[] colorRed = {255, 51, 51};
 
             graphics.setColor(new Color(colorRed[0], colorRed[1], colorRed[2]));
-            graphics.fillRect((int) x + 1440, (int) (-3015 + y), 480, (int) (4020.0 - y));
+            graphics.fillRect((int) (x + offsetX * 3), (int) (-3 * height + y), (int) width, (int) (4 * height - y));
         }
 
         public void actionPerformed(ActionEvent e) {
-            y += 1005.0 / 600.0;
+            y += height / (60000. / 100.);
             this.repaint();
         }
     }

@@ -23,7 +23,7 @@
         <th>Animal type</th>
     </tr>
 
-    <tr th:each="account, iterationStatus: ${accountList}">
+    <tr th:each="account, iterationStatus: ${accountList}" th:style="${account.name} == 'King' ? 'color: gold' : 'color: blue'" >
         <th th:text="|${iterationStatus.count } |"></th>
         <td th:text="| ${account.name} |"></td>
         <td th:text="${account.balance}"></td>

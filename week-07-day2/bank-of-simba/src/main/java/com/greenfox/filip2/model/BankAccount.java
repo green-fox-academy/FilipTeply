@@ -8,9 +8,11 @@ public class BankAccount {
     BigDecimal balance;
     String animalType;
     String currency;
+    boolean goodGuy;
 
 
-    public BankAccount(String name, BigDecimal balance, String currency, String animalType) {
+    public BankAccount(String name, BigDecimal balance, String currency, String animalType, boolean goodGuy) {
+        this.goodGuy = goodGuy;
         this.name = name;
         this.balance = balance;
         this.currency = currency;
@@ -49,4 +51,13 @@ public class BankAccount {
     public void setAnimalType(String animalType) {
         this.animalType = animalType;
     }
+
+    public boolean getGoodGuy() {
+        return goodGuy;
+    }
+
+    public void setGoodGuy(boolean goodGuy) {
+        this.goodGuy = goodGuy;
+    }
+
 }

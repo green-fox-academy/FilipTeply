@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Exercise #</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+
+<p th:each="account : ${accountList}"
+   th:text="|name: ${account.name}, balance: ${account.balance} ${account.currency}, animal type: ${account.animalType}|"></p>
+
+
+<table>
+
+
+    <tr>
+        <th>#</th>
+        <th>Account name</th>
+        <th>Balance</th>
+        <th>Currency</th>
+        <th>Animal type</th>
+    </tr>
+
+    <tr th:each="account, iterationStatus: ${accountList}">
+        <th th:text="|${iterationStatus.count } |"></th>
+        <td th:text="| ${account.name} |"></td>
+        <td th:text="${account.balance}"></td>
+        <td th:text="${account.currency}"></td>
+        <td th:text="${account.animalType}"></td>
+    </tr>
+
+
+</table>
+
+<!--<p th:each="|name: ${account.name}, balance: ${account.balance} ${account.currency}, animal type: ${account.animalType}|"></p>-->
+
+
+</body>
+</html>

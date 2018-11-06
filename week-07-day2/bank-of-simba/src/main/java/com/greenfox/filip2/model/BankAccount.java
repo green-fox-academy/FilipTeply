@@ -1,14 +1,19 @@
 package com.greenfox.filip2.model;
 
+import java.math.BigDecimal;
+
 public class BankAccount {
 
     String name;
-    String balance;
+    BigDecimal balance;
     String animalType;
+    String currency;
 
-    public BankAccount(String name, String balance, String animalType) {
+
+    public BankAccount(String name, BigDecimal balance, String currency, String animalType) {
         this.name = name;
         this.balance = balance;
+        this.currency = currency;
         this.animalType = animalType;
     }
 
@@ -20,12 +25,21 @@ public class BankAccount {
         this.name = name;
     }
 
-    public String getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(String balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
+    }
+
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 
     public String getAnimalType() {

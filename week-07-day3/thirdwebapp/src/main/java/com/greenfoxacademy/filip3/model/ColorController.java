@@ -32,5 +32,21 @@ public class ColorController {
         return "usefulEmail";
     }
 
+    @RequestMapping(value = "/useful/encode")
+    public String encode(@RequestParam String textToEncode, @RequestParam int numberForEncode, Model model) {
+        model.addAttribute("textRightAfterEncoding", utilityService.caesarEncode(textToEncode, numberForEncode));
+        model.addAttribute("textToEncode", textToEncode);
+        model.addAttribute("numberForEncode", numberForEncode);
+        return "caesarEncoder";
+    }
+
+    @RequestMapping(value = "/useful/decode")
+    public String decode(@RequestParam String textToDecode, @RequestParam int numberForDecode, Model model) {
+        model.addAttribute("textRightAfterDecoding", utilityService.caesarDecode(textToDecode, numberForDecode));
+        model.addAttribute("textToDecode", textToDecode);
+        model.addAttribute("numberForDecode", numberForDecode);
+        return "caesarDecoder";
+    }
+
 
 }

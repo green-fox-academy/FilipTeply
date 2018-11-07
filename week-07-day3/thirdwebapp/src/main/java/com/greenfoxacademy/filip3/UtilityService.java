@@ -34,7 +34,24 @@ public class UtilityService {
     }
 
 
-//check if the string contains a @ and a .
+    @RequestMapping(value = "/useful/encode")
+    public String caesarEncode(String text, int number) {
+        String result = "";
+        for (int i = 0; i < text.length(); i++) {
+            result += (char) ((int) text.charAt(i) + number);
+        }
+        return result;
+    }
+
+
+    @RequestMapping(value = "/useful/decode")
+    public String caesarDecode(String text, int number) {
+        String result = "";
+        for (int i = 0; i < text.length(); i++) {
+            result += (char) ((int) text.charAt(i) - number);
+        }
+        return result;
+    }
 
 
 }

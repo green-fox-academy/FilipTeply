@@ -9,10 +9,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PrinterApp implements CommandLineRunner {
 
-    @Autowired
+
     Printer printer;
+    MyColor color;
+
     @Autowired
-    RedColor red;
+    public PrinterApp(Printer printer, MyColor color) {
+        this.printer = printer;
+        this.color = color;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(PrinterApp.class, args);
@@ -22,7 +27,7 @@ public class PrinterApp implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         printer.log("hello");
-        red.printColor();
+        color.printColor();
     }
 }
 

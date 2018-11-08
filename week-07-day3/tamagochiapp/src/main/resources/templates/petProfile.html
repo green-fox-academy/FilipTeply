@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pet Profile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a style="display: block" href="/info">Information</a>
+
+<img th:src="greenfox.png"/>
+
+
+<p th:text="|This is ${name}.|"></p>
+
+
+<!--<p th:text="|This is . Currently living on pizza and Iceberg lettuce. He knows 2 tricks.|"></p>-->
+
+<h1>Known Tricks</h1>
+
+
+</body>
+</html>

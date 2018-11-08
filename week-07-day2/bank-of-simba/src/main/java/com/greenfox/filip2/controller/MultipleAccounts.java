@@ -18,7 +18,6 @@ public class MultipleAccounts {
     @RequestMapping(value = "/show3")
     public String show(Model model) {
 
-
         List<BankAccount> bankAccountList = Arrays.asList(
                 new BankAccount("Simba", new BigDecimal(2000.00), "Zebra", "lion", true),
                 new BankAccount("Scar", new BigDecimal(80.00), "Zebra", "lion", false),
@@ -32,13 +31,13 @@ public class MultipleAccounts {
     }
 
 
-    @PutMapping
-    public BigDecimal increaseBalance() {
-        if () {
-
-        } else {
-        }
-    }
+//    @PutMapping
+//    public BigDecimal increaseBalance() {
+//        if () {
+//
+//        } else {
+//        }
+//    }
 
 
 }

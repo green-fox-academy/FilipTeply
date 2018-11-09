@@ -1,10 +1,12 @@
 body {
-    width: 600px;
+
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     color: maroon;
-    font-family: "Arial Black";
+    font-family: "Old English Text MT";
 
-    margin: 0 auto;
 }

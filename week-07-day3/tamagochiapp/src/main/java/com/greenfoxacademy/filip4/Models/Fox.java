@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Fox {
 
     String name;
-    //ArrayList<Trick> listOfTricks;
+    ArrayList<Trick> listOfTricks;
     String food;
     String drink;
 
@@ -17,34 +17,33 @@ public class Fox {
         this.name = name;
         this.food = "salad";
         this.drink = "water";
-      //  this.listOfTricks = new ArrayList<>();
-       // this.listOfTricks = listOfTricks;
+        this.listOfTricks = new ArrayList<>();
+        this.listOfTricks = listOfTricks;
     }
 
     public Fox(String name, String food, String drink) {
         this.name = name;
         this.food = food;
         this.drink = drink;
-//        this.listOfTricks = new ArrayList<>();
-//        this.listOfTricks = listOfTricks;
+        this.listOfTricks = new ArrayList<>();
+        this.listOfTricks = listOfTricks;
     }
 
     public Fox(String name, String food, String drink, ArrayList listOfTricks) {
         this.name = name;
         this.food = food;
         this.drink = drink;
-//        this.listOfTricks = new ArrayList<>();
-//        this.listOfTricks = listOfTricks;
+        this.listOfTricks = new ArrayList<>();
+        this.listOfTricks = listOfTricks;
     }
-
 
     public String getName() {
         return name;
     }
 
-//    public ArrayList getListOfTricks() {
-//        return listOfTricks;
-//    }
+    public ArrayList getListOfTricks() {
+        return listOfTricks;
+    }
 
     public String getFood() {
         return food;

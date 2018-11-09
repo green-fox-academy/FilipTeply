@@ -22,16 +22,9 @@ public class MainController {
     @GetMapping(value = "/")
     public String indexPageController
             (@RequestParam(value = "name", defaultValue = "Mr Fox") String name, Model model) {
-
-        model.addAttribute("fox",
-                foxListHandler.listOfFoxes.stream()
-                        .filter(l -> l.getName().equals(name))
-                        .findFirst()
-                        .get());
-
+        model.addAttribute("fox", foxListHandler.getFoxFromList(name));
         return "index";
     }
-
 
     @GetMapping(value = "/login")
     public String loginPageController() {

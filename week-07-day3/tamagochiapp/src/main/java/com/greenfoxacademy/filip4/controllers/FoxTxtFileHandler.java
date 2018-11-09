@@ -96,6 +96,11 @@ public class FoxTxtFileHandler implements FoxService {
 
     }
 
+    @Override
+    public Fox getFoxFromList(String name) {
+        return null;
+    }
+
 //    @Override
 //    public String getFoxName() {
 //

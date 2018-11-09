@@ -12,6 +12,10 @@ public interface FoxService {
 
     List<Fox> getAllFoxes();
 
-    //String getFoxName();
+    Fox getFoxFromList(String name);
+
+
+
+
 
 }

@@ -17,9 +17,6 @@ public class HelloWebController {
 
     @RequestMapping(value = "web/greeting")
     public String greeting(@RequestParam(value = "name", defaultValue = "Hello World!") String name, Model model) {
-
-
-
         model.addAttribute("name", name);
         model.addAttribute("idCounter", idCounter.incrementAndGet());
         return "greeting";

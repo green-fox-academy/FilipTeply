@@ -1,6 +1,10 @@
+body {
+    width: 600px;
+}
+
 main {
     color: maroon;
-    font-family: Calibri;
+    font-family: "Arial Black";
 
     margin: 0 auto;
 }

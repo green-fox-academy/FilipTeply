@@ -21,8 +21,6 @@ public class Trick {
 
     @Override
     public String toString() {
-        return "Trick{" +
-                "trick='" + trickName + '\'' +
-                '}';
+        return trickName;
     }
 }

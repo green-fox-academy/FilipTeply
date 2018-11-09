@@ -1,7 +1,6 @@
 package com.greenfoxacademy.filip4.controllers;
 
 import com.greenfoxacademy.filip4.Models.Fox;
-import com.greenfoxacademy.filip4.Models.Trick;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,70 +9,42 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Arrays;
-import java.util.List;
-
 @Controller
 public class MainController {
 
-
-    FoxService foxService;
+    FoxListHandler foxListHandler;
 
     @Autowired
-    public MainController(FoxService foxService) {
-        this.foxService = foxService;
+    public MainController(FoxListHandler foxListHandler) {
+        this.foxListHandler = foxListHandler;
     }
 
     @GetMapping(value = "/")
-    public String indexPageController(@RequestParam(value = "name", required = false) String name, Fox fox, Model model) {
-        if (name != null) {
+    public String indexPageController
+            (@RequestParam(value = "name", defaultValue = "Mr Fox") String name, Model model) {
 
-            model.addAttribute("name", name);
-  //          model.addAttribute("food", fox.getFood());
-//            model.addAttribute("drink", fox.getDrink());
-//            model.addAttribute("trickCount", Integer.toString(fox.getListOfTricks().size()));
-//            model.addAttribute("trickList", fox.getListOfTricks());
-           // model.addAttribute("listOfFoxes", foxService.getListOfFoxes());
+        model.addAttribute("fox",
+                foxListHandler.listOfFoxes.stream()
+                        .filter(l -> l.getName().equals(name))
+                        .findFirst()
+                        .get());
 
-//            model.addAttribute("name", foxService.getListOfFoxes().stream()
-//                    .filter(fox -> fox.getName() == name)
-//                    .findFirst()
-//                    .get());
-//            model.addAttribute("food", foxService.getListOfFoxes().stream()
-//                    .filter(fox -> fox.getFood() == food)
-//                    .findFirst()
-//                    .get());
-//            model.addAttribute("drink", mrFox.getDrink());
-
-            return "index";
-        } else {
-            model.addAttribute("listOfFoxes", foxService.getListOfFoxes());
-            model.addAttribute("name", foxService.mrFox.getName());
-            model.addAttribute("food", foxService.mrFox.getFood());
-            model.addAttribute("drink", foxService.mrFox.getDrink());
-            model.addAttribute("trickCount", Integer.toString(foxService.mrFoxTrickList.size()));
-            model.addAttribute("trickList", foxService.mrFoxTrickList);
-//
-// model.addAttribute("food", mrFox.getFood());
-//            model.addAttribute("drink", mrFox.getDrink());
-//            model.addAttribute("tricks", mrFox.getDrink());
-            return "index";
-        }
+        return "index";
     }
+
 
     @GetMapping(value = "/login")
     public String loginPageController() {
         return "login";
     }
 
-
     @PostMapping(value = "/login")
     public String loginNewFox(@RequestParam String name) {
-        Fox fox = new Fox(name);
-        foxService.addFox(fox);
-        //model.addAttribute("foxName", fox);
+        Fox f = new Fox(name);
+        foxListHandler.addFox(f);
         return "redirect:/?name=" + name;
     }
+
 
 //    @GetMapping(value = "/foodcenter")
 //    public String foodCenter(@RequestParam(value = "name", required = false) String name, Model model) {
@@ -98,5 +69,17 @@ public class MainController {
 //    public String showAllFoxes(@RequestParam String name){
 //
 //    }
+
+
+//    model.addAttribute("food", foxListHandler.listOfFoxes.stream()
+//            .map(l -> l.getFood() == fox.getNa)
+//            .findFirst()
+//                .get());
+//        model.addAttribute("drink", foxListHandler.listOfFoxes.);
+//        model.addAttribute("fox", );
+//
+//        model.addAttribute("name", foxTxtFileHandler.mrFox.getName());
+//        model.addAttribute("food", foxTxtFileHandler.mrFox.getFood());
+//        model.addAttribute("drink", foxTxtFileHandler.mrFox.getDrink());
 
 }

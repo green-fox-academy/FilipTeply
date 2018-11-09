@@ -1,3 +1,2 @@
-
-Fox{name='Fox3', food='salad', drink='water', listOfTricks=null}
-Fox{name='Fox4', food='salad', drink='water', listOfTricks=null}
+Ms_Foxess cakes coffee
+Mr_Fox pizza lemonade

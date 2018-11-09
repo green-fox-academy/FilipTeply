@@ -15,6 +15,8 @@ public class Fox {
 
     public Fox(String name) {
         this.name = name;
+        this.food = "salad";
+        this.drink = "water";
     }
 
     public Fox(String name, String food, String drink) {
@@ -48,13 +50,14 @@ public class Fox {
         return drink;
     }
 
+
     @Override
     public String toString() {
         return "Fox{" +
                 "name='" + name + '\'' +
-                ", listOfTricks=" + listOfTricks +
                 ", food='" + food + '\'' +
                 ", drink='" + drink + '\'' +
+                ", listOfTricks=" + listOfTricks +
                 '}';
     }
 

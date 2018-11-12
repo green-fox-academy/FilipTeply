@@ -117,6 +117,40 @@ public class PokerChecker {
         assertEquals(false, Main.areColorsinHandsEqualOO(c1,c2,c3,c4,c5,p1,p2,p3,p4,p5));
     }
 
+    @Test
+    public void isRoyalFlush1() {
+        Card c1 = new Card(2, 11);
+        Card c2 = new Card(2, 10);
+        Card c3 = new Card(2, 13);
+        Card c4 = new Card(2, 9);
+        Card c5 = new Card(2, 12);
+
+        assertEquals(true, Hands.isRoyalFlush(c1,c2,c3,c4,c5));
+    }
+
+    @Test
+    public void isFlush1() {
+        Card c1 = new Card(2, 11);
+        Card c2 = new Card(2, 10);
+        Card c3 = new Card(2, 13);
+        Card c4 = new Card(2, 9);
+        Card c5 = new Card(2, 12);
+        assertEquals(true, Hands.isFlush(c1,c2,c3,c4,c5));
+        
+    }
+
+    @Test
+    public void isStraight1() {
+        Card c1 = new Card(2, 11);
+        Card c2 = new Card(2, 10);
+        Card c3 = new Card(2, 13);
+        Card c4 = new Card(2, 9);
+        Card c5 = new Card(2, 12);
+
+        assertEquals(true, Hands.isStraight(c1,c2,c3,c4,c5));
+    }
+
+
 //    @Test
 //    public void doesCompareHands8() {
 //        Card c1 = new Card(2, 11);

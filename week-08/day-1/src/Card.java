@@ -1,4 +1,4 @@
-public class Card {
+public class Card implements Comparable<Card>{
 
     int color;
     int id;
@@ -23,5 +23,10 @@ public class Card {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public int compareTo(Card o) {
+        return Integer.compare(this.id, o.id);
     }
 }

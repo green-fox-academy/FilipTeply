@@ -136,7 +136,7 @@ public class PokerChecker {
         Card c4 = new Card(2, 9);
         Card c5 = new Card(2, 12);
         assertEquals(true, Hands.isFlush(c1,c2,c3,c4,c5));
-        
+
     }
 
     @Test

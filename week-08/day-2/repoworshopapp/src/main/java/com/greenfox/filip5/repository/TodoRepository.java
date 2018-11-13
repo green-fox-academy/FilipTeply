@@ -7,7 +7,9 @@ import java.util.List;
 
 public interface TodoRepository extends CrudRepository<Todo, Long> {
 
-@Override
-List<Todo> findAll();
+    @Override
+    List<Todo> findAll();
 
+//    @Override
+//    void save();
 }

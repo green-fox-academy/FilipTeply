@@ -43,8 +43,17 @@ public class TodoController {
     @PostMapping(value = "/{id}/delete")
     public String delete(@PathVariable("id") Long id) {
         todoRepository.deleteById(id);
-              return "redirect:/todo/";
+        return "redirect:/todo/";
     }
+
+    @PostMapping(value = "/{id}/edit")
+    public String edit(@PathVariable("id") Long id) {
+        todoRepository.findById(id);
+
+        todoRepository.save( );
+        return "edit";
+    }
+
 
     //Extend the controller class with delete() method mapping to /{id}/delete
     //The aim is to delete the clicked item

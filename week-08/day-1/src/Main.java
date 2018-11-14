@@ -5,18 +5,29 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
 
-        int[] color = new int[4];
+        Hand White = new Hand();
+        Hand Black;
+        /*
+        list karty a
+        list karty b
+        sort list a
+        sort list b
+        giveHandValue a
+        giveHandValue b
+        who wins if one hand is bigger ,
+        else if card ids a are equals card ids b = tie else
+        find which is higher if giveHandValues equals = a wins, b wins, tie
 
-        int[] value = new int[13];
+
+
+
+
+        */
 
 
         compareTwoCards(13, 11);
-
-
     }
-
 
     public static Boolean compareTwoCards(int value1, int value2) {
         if (value1 >= value2) return true;
@@ -50,17 +61,17 @@ public class Main {
         else return false;
     }
 
-    public static Boolean areColorsinHandsEqualOO(Card c1, Card c2, Card c3, Card c4, Card c5,
-                                                  Card p1, Card p2, Card p3, Card p4, Card p5) {
-        List<Card> hand1 = Arrays.asList(c1, c2, c3, c4, c5);
-        List<Card> hand2 = Arrays.asList(p1, p2, p3, p4, p5);
-        int x = 0;
-        for (int i = 0; i < 3; i++) {
-            if ((hand1.get(i).color == hand1.get(i + 1).color) && (hand2.get(i).color == hand2.get(i + 1).color)){
-                x++;
-            }
-        }
-        if (x == 5) return true;
-        else return false;
-    }
+//    public static Boolean areColorsinHandsEqualOO(Card c1, Card c2, Card c3, Card c4, Card c5,
+//                                                  Card p1, Card p2, Card p3, Card p4, Card p5) {
+//        List<Card> hand1 = Arrays.asList(c1, c2, c3, c4, c5);
+//        List<Card> hand2 = Arrays.asList(p1, p2, p3, p4, p5);
+//        int x = 0;
+//        for (int i = 0; i < 3; i++) {
+//            if ((hand1.get(i).color == hand1.get(i + 1).color) && (hand2.get(i).color == hand2.get(i + 1).color)){
+//                x++;
+//            }
+//        }
+//        if (x == 5) return true;
+//        else return false;
+//    }
 }

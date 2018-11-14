@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class PokerChecker {
+public class TestPokerChecker {
 
 
     @Test
@@ -76,7 +76,7 @@ public class PokerChecker {
     }
 
     @Test
-    public void doesCompareHands6() {
+    public void doesCompareColorsHand6() {
         Card c1 = new Card(2, 11);
         Card c2 = new Card(2, 11);
         Card c3 = new Card(3, 11);
@@ -86,7 +86,7 @@ public class PokerChecker {
     }
 
     @Test
-    public void doesCompareTwoHands1() {
+    public void doesCompareColorsWithinIndividualHands1() {
         Card c1 = new Card(2, 11);
         Card c2 = new Card(2, 10);
         Card c3 = new Card(2, 8);
@@ -98,11 +98,11 @@ public class PokerChecker {
         Card p3 = new Card(3, 4);
         Card p4 = new Card(3, 5);
         Card p5 = new Card(3, 6);
-        assertEquals(true, Main.areColorsinHandsEqualOO(c1,c2,c3,c4,c5,p1,p2,p3,p4,p5));
+        assertEquals(true, Main.areColorsInHandEqual(c1,c2,c3,c4,c5) && Main.areColorsInHandEqual(p1,p2,p3,p4,p5));
     }
 
     @Test
-    public void doesCompareTwoHands2() {
+    public void doesCompareColorsWithinIndividualHands2() {
         Card c1 = new Card(2, 11);
         Card c2 = new Card(2, 10);
         Card c3 = new Card(2, 8);
@@ -114,7 +114,7 @@ public class PokerChecker {
         Card p3 = new Card(3, 4);
         Card p4 = new Card(3, 5);
         Card p5 = new Card(3, 6);
-        assertEquals(false, Main.areColorsinHandsEqualOO(c1,c2,c3,c4,c5,p1,p2,p3,p4,p5));
+        assertEquals(false, Main.areColorsInHandEqual(c1,c2,c3,c4,c5) && Main.areColorsInHandEqual(p1,p2,p3,p4,p5));
     }
 
     @Test
@@ -125,7 +125,7 @@ public class PokerChecker {
         Card c4 = new Card(2, 9);
         Card c5 = new Card(2, 12);
 
-        assertEquals(true, Hands.isRoyalFlush(c1,c2,c3,c4,c5));
+        assertEquals(true, Hand.isRoyalFlush(c1,c2,c3,c4,c5));
     }
 
     @Test
@@ -135,7 +135,7 @@ public class PokerChecker {
         Card c3 = new Card(2, 13);
         Card c4 = new Card(2, 9);
         Card c5 = new Card(2, 12);
-        assertEquals(true, Hands.isFlush(c1,c2,c3,c4,c5));
+        assertEquals(true, Hand.isFlush(c1,c2,c3,c4,c5));
 
     }
 
@@ -147,9 +147,62 @@ public class PokerChecker {
         Card c4 = new Card(2, 9);
         Card c5 = new Card(2, 12);
 
-        assertEquals(true, Hands.isStraight(c1,c2,c3,c4,c5));
+        assertEquals(true, Hand.isStraight(c1,c2,c3,c4,c5));
     }
 
+    @Test
+    public void isStraight2() {
+        Card c1 = new Card(2, 11);
+        Card c2 = new Card(2, 10);
+        Card c3 = new Card(3, 13);
+        Card c4 = new Card(2, 9);
+        Card c5 = new Card(2, 12);
+
+        assertEquals(true, Hand.isStraight(c1,c2,c3,c4,c5));
+    }
+
+    @Test
+    public void isNotStraight1() {
+        Card c1 = new Card(2, 11);
+        Card c2 = new Card(2, 10);
+        Card c3 = new Card(2, 2);
+        Card c4 = new Card(2, 9);
+        Card c5 = new Card(0, 12);
+
+        assertEquals(true, !Hand.isStraight(c1,c2,c3,c4,c5));
+    }
+
+    @Test
+    public void isStraightFlush1() {
+        Card c1 = new Card(2, 11);
+        Card c2 = new Card(2, 10);
+        Card c3 = new Card(2, 13);
+        Card c4 = new Card(2, 9);
+        Card c5 = new Card(2, 12);
+
+        assertEquals(true, Hand.isStraight(c1,c2,c3,c4,c5) && Hand.isFlush(c1,c2,c3,c4,c5));
+    }
+
+    @Test
+    public void isNotStraightFlush1() {
+        Card c1 = new Card(2, 11);
+        Card c2 = new Card(2, 10);
+        Card c3 = new Card(3, 13);
+        Card c4 = new Card(2, 9);
+        Card c5 = new Card(2, 12);
+
+        assertEquals(false, Hand.isStraight(c1,c2,c3,c4,c5) && Hand.isFlush(c1,c2,c3,c4,c5));
+    }
+
+    @Test
+    public void isNotStraightFlush2() {
+        Card c1 = new Card(2, 11);
+        Card c2 = new Card(2, 8);
+        Card c3 = new Card(2, 13);
+        Card c4 = new Card(2, 9);
+        Card c5 = new Card(2, 12);
+        assertEquals(false, Hand.isStraight(c1,c2,c3,c4,c5) && Hand.isFlush(c1,c2,c3,c4,c5));
+    }
 
 //    @Test
 //    public void doesCompareHands8() {

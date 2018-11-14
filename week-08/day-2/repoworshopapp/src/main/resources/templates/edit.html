@@ -10,8 +10,13 @@
 
 <h1>Add new todo</h1>
 
-<form th:action="|/todo/${todo.getId()}/edit|" th:method="post">
-    Name <input type="text" name="title">
+<form th:action="|/todo/${todo.getId()}/edit|" th:method="post" style="display: block">
+    <br>
+    Name <input type="text" name="Title" th:value="${todo.getTitle()}" >
+    <br>
+    Urgent <input type="checkbox" name="Urgent" th:checked="${todo.isUrgent}">
+    <br>
+    Done <input type="checkbox" name="Done" th:checked="${todo.isDone}">
     <input type="submit" value="Submit">
 </form>
 

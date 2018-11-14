@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Todo CRUD App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/styles.css"/>
+
+</head>
+
+<body>
+
+<h1>Todos for today:</h1>
+<!--<ul>-->
+<!--<li>Start the day</li>-->
+<!--<br/>-->
+<!--<li>Finish H2 workshop1</li>-->
+<!--<br/>-->
+<!--<li>Finish JPA workshop2</li>-->
+<!--<br/>-->
+<!--<li>Create a CRUD project</li>-->
+<!--</ul>-->
+<table>
+
+    <a style="display: block" href="/todo/add">Add new todo</a>
+    <br/>
+    <!--th:width="90%" th:border="5"-->
+    <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>urgent</th>
+        <th>done</th>
+    </tr>
+
+
+    <div th:each="todo : ${todos}">
+        <tr>
+            <td th:text="|${todo.getId()}|"></td>
+            <td th:text="|${todo.getTitle()}|"></td>
+            <td th:text="|${todo.isDone()}|"></td>
+            <td th:text="|${todo.isUrgent()}|"></td>
+            <td>
+                <form th:action="|/todo/${todo.getId()}/delete|" th:method="post">
+                    <button>Delete</button>
+                </form>
+            </td>
+            <td>
+                <form th:action="|/todo/${todo.getId()}/edit|" th:method="get">
+                    <button>Edit</button>
+                </form>
+            </td>
+        </tr>
+    </div>
+
+</table>
+</body>
+</html>

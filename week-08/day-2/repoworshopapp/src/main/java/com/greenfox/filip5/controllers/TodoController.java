@@ -46,12 +46,27 @@ public class TodoController {
         return "redirect:/todo/";
     }
 
-    @PostMapping(value = "/{id}/edit")
-    public String edit(@PathVariable("id") Long id) {
-        todoRepository.findById(id);
-
-        todoRepository.save( );
+    @GetMapping("/{id}/edit")
+    public String editForm(@PathVariable("id") Long id, Model model) {
+        model.addAttribute("todo", todoRepository.findById(id).get());
+        System.out.println(todoRepository.findById(id).get().getId());
         return "edit";
+    }
+
+    @PostMapping(value = "/{id}/edit")
+    public String edit(@PathVariable("id") Long id, @RequestParam(value = "Title", required = false)
+            String title,
+                       @RequestParam(value = "Urgent", required = false, defaultValue = "false") boolean urgent,
+                       @RequestParam(value = "Done", required = false, defaultValue = "false") boolean done) {
+        Todo t = todoRepository.findById(id).get();
+        if (title != null) {
+            t.setTitle(title);
+        }
+
+        t.setUrgent(urgent);
+        t.setDone(done);
+        todoRepository.save(t);
+        return "redirect:/todo/";
     }
 
 

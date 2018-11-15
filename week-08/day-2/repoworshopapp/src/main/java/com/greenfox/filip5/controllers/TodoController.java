@@ -56,21 +56,40 @@ public class TodoController {
         return "edit";
     }
 
+    @GetMapping(value = "/notcompleted")
+    public String notCompletedList(Model model) {
+        model.addAttribute("todos", todoRepository.findAllByCompletedIsFalseOrderByIdDesc());
+        return "todolist";
+    }
+
+    @GetMapping(value = "/completed")
+    public String completedList(Model model) {
+        model.addAttribute("todos", todoRepository.findAllByCompletedIsTrueOrderByIdDesc());
+        return "todolist";
+    }
+
+    @GetMapping(value = "/urgentnotcompleted")
+    public String urgentList(Model model) {
+        model.addAttribute("todos", todoRepository.findAllByUrgentIsTrueAndCompletedIsFalseOrderByIdDesc());
+        return "todolist";
+    }
+
+
     @PostMapping(value = "/{id}/edit")
     public String edit(@PathVariable("id") Long id, @RequestParam(value = "Title", required = false)
             String title,
                        @RequestParam(value = "Urgent", required = false, defaultValue = "false") boolean urgent,
                        @RequestParam(value = "Done", required = false, defaultValue = "false") boolean completed) {
         Todo t = todoRepository.findById(id).get();
-        if (title != null) {
-            t.setTitle(title);
-        }
-
+//        if (title != null) {
+        t.setTitle(title);
+        //  }
         t.setUrgent(urgent);
         t.setCompleted(completed);
         todoRepository.save(t);
         return "redirect:/todo/";
     }
+
 
 }
 
@@ -89,14 +108,12 @@ public class TodoController {
 //        }
 
 
-
-
-    //Extend the controller class with delete() method mapping to /{id}/delete
-    //The aim is to delete the clicked item
-    //To do this the clicked item should be specified in the path, so we will need a uniq @PathVariable, which in our case is the long id of the todo item
-    //Use the delete(id) method of the repository passing the id in it
-    //Don't forget to specify the id in the template when you create the 'delete' link
-    //After the user deleted the item the list page should come up
+//Extend the controller class with delete() method mapping to /{id}/delete
+//The aim is to delete the clicked item
+//To do this the clicked item should be specified in the path, so we will need a uniq @PathVariable, which in our case is the long id of the todo item
+//Use the delete(id) method of the repository passing the id in it
+//Don't forget to specify the id in the template when you create the 'delete' link
+//After the user deleted the item the list page should come up
 
 
 //    Extend the project and add a create todo view and methods

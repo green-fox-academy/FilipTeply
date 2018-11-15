@@ -20,7 +20,14 @@ public interface TodoRepository extends CrudRepository<Todo, Long> {
 
 
 
+    List<Todo> findAllByCompletedIsFalseOrderByIdDesc();
+
     List<Todo> findAllByCompletedIsTrueOrderByIdDesc();
+
+    List<Todo> findAllByUrgentIsTrueOrderByIdDesc();
+
+    List<Todo> findAllByUrgentIsTrueAndCompletedIsFalseOrderByIdDesc();
+
 
 
 }

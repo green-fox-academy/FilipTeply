@@ -8,11 +8,11 @@
 
 </head>
 
-<body >
+<body>
 
 <div class="center-block" style="width: 800px">
 
-    <h1 >Todos for Today</h1>
+    <h1>Todos for Today</h1>
     <!--<ul>-->
     <!--<li>Start the day</li>-->
     <!--<br/>-->
@@ -22,10 +22,20 @@
     <!--<br/>-->
     <!--<li>Create a CRUD project</li>-->
     <!--</ul>-->
+
+    <a style="display: block" href="/todo/">All todos</a>
+    <a style="display: block" href="/todo//urgentnotcompleted">Urgent</a>
+    <a style="display: block" href="/todo/notcompleted">Not completed</a>
+    <a style="display: block" href="/todo/completed">Completed </a>
+
+    <a style="display: block" href="/todo/add">Add new</a>
+
+
+    <button class="btn btn-warning">Delete</button>
+
+
     <table align="center" class="table-striped table-hover" style="width: 800px">
 
-        <a style="display: block" href="/todo/add">Add new todo</a>
-        <button class="btn btn-warning">Delete</button>
 
         <br/>
         <!--th:width="90%" th:border="5"-->
@@ -34,6 +44,8 @@
             <th>title</th>
             <th>urgent</th>
             <th>completed</th>
+            <th></th>
+            <th></th>
         </tr>
 
         <div th:each="todo : ${todos}">
@@ -63,7 +75,7 @@
 
                 <td>
                     <form th:action="|/todo/${todo.getId()}/delete|" th:method="post">
-                        <button class="btn btn-warning">Delete</button>
+                        <button style="height: 50%" class="btn btn-warning">Delete</button>
                     </form>
                 </td>
                 <td>

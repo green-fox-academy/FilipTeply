@@ -56,6 +56,12 @@ public class TodoController {
         return "edit";
     }
 
+    @GetMapping(value = "/urgentnotcompleted")
+    public String urgentNotCompletedList(Model model) {
+        model.addAttribute("todos", todoRepository.findAllByUrgentIsTrueAndCompletedIsFalseOrderByIdDesc());
+        return "todolist";
+    }
+
     @GetMapping(value = "/notcompleted")
     public String notCompletedList(Model model) {
         model.addAttribute("todos", todoRepository.findAllByCompletedIsFalseOrderByIdDesc());
@@ -68,11 +74,8 @@ public class TodoController {
         return "todolist";
     }
 
-    @GetMapping(value = "/urgentnotcompleted")
-    public String urgentList(Model model) {
-        model.addAttribute("todos", todoRepository.findAllByUrgentIsTrueAndCompletedIsFalseOrderByIdDesc());
-        return "todolist";
-    }
+
+
 
 
     @PostMapping(value = "/{id}/edit")

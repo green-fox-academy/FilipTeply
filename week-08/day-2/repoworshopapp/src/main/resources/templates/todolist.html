@@ -9,93 +9,126 @@
 </head>
 
 <body>
+<main style="display: flex;
+      flex-direction: column;
+      align-items: center">
 
-<div class="center-block" style="width: 800px">
-
-    <h1>Todos for Today</h1>
-    <!--<ul>-->
-    <!--<li>Start the day</li>-->
-    <!--<br/>-->
-    <!--<li>Finish H2 workshop1</li>-->
-    <!--<br/>-->
-    <!--<li>Finish JPA workshop2</li>-->
-    <!--<br/>-->
-    <!--<li>Create a CRUD project</li>-->
-    <!--</ul>-->
-
-    <a style="display: block" href="/todo/">All todos</a>
-    <a style="display: block" href="/todo//urgentnotcompleted">Urgent</a>
-    <a style="display: block" href="/todo/notcompleted">Not completed</a>
-    <a style="display: block" href="/todo/completed">Completed </a>
-
-    <a style="display: block" href="/todo/add">Add new</a>
+    <!--background="/EdisonTodo.jpg" style="background-repeat: no-repeat"-->
 
 
-    <button class="btn btn-warning">Delete</button>
+    <div class="center-block" style="width: 800px">
+
+        <h1 style="margin-top: 100px; margin-bottom: 50px">Todos for Today</h1>
+
+        <a href="/todo/" role="button" class="btn btn-primary">All todos</a>
+        <a href="/todo/urgentnotcompleted" role="button" class="btn btn-success">Urgent & not
+            completed</a>
+        <a href="/todo/notcompleted" role="button" class="btn btn-info">Not completed</a>
+        <a href="/todo/completed" role="button" class="btn btn-warning">Completed</a>
+        <a href="/todo/add" role="button" class="btn btn-danger">Add new</a>
+
+        <div class="card">
+            <table align="center" class="table-striped table-hover" style="width: 800px; background: white">
 
 
-    <table align="center" class="table-striped table-hover" style="width: 800px">
+                <br/>
+                <!--th:width="90%" th:border="5"-->
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>urgent</th>
+                    <th>completed</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <div th:each="todo : ${todos}">
+                    <tr>
+                        <td><span th:text="${todo.getId()}"></span></td>
+                        <td><span th:text="${todo.getTitle()}"></span></td>
 
 
-        <br/>
-        <!--th:width="90%" th:border="5"-->
-        <tr>
-            <th>id</th>
-            <th>title</th>
-            <th>urgent</th>
-            <th>completed</th>
-            <th></th>
-            <th></th>
-        </tr>
+                        <div th:if="${todo.isUrgent()}">
+                            <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+                        </div>
 
-        <div th:each="todo : ${todos}">
-            <tr>
-                <td><span th:text="${todo.getId()}"></span></td>
-                <td><span th:text="${todo.getTitle()}"></span></td>
+                        <div th:unless="${todo.isUrgent()}">
+                            <td></td>
+                        </div>
+
+                        <div th:if="${todo.isCompleted()}">
+                            <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+                        </div>
+
+                        <div th:unless="${todo.isCompleted()}">
+                            <td></td>
+                        </div>
+
+                        <!--<td><span th:text="${todo.isCompleted()? 'yes' : 'no'}"></span></td>-->
+
+                        <!--<div class="btn-group-vertical" role="group" aria-label="...">-->
+                        <!--...-->
+                        <!--</div>-->
+
+                        <!--class="btn btn-warning"-->
+
+                        <!--glyphicon-trash-->
 
 
-                <div th:if="${todo.isUrgent()}">
-                    <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+                        <td>
+                            <form th:action="|/todo/${todo.getId()}/delete|" th:method="post">
+                                <!--<div class="btn-group-vertical" role="group">-->
+                                <button>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </button>
+                                <!--</div>-->
+                            </form>
+                        </td>
+                        <td>
+                            <form th:action="|/todo/${todo.getId()}/edit|" th:method="get">
+                                <button>
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                 </div>
 
-                <div th:unless="${todo.isUrgent()}">
-                    <td></td>
-                </div>
-
-                <div th:if="${todo.isCompleted()}">
-                    <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-                </div>
-
-                <div th:unless="${todo.isCompleted()}">
-                    <td></td>
-                </div>
-
-                <!--<td><span th:text="${todo.isCompleted()? 'yes' : 'no'}"></span></td>-->
-
-
-                <td>
-                    <form th:action="|/todo/${todo.getId()}/delete|" th:method="post">
-                        <button style="height: 50%" class="btn btn-warning">Delete</button>
-                    </form>
-                </td>
-                <td>
-                    <form th:action="|/todo/${todo.getId()}/edit|" th:method="get">
-                        <button class="btn btn-primary">Edit</button>
-                    </form>
-                </td>
-            </tr>
+            </table>
         </div>
 
-    </table>
 
+        <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+        <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
 
-    <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
-    <script src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
-
-</div>
+    </div>
+    <main>
 </body>
 </html>
 
 <!--<img src="..." alt="..." class="img-rounded">-->
 
 <!--<td th:text="${todo.isUrgent() ? 'yes' : 'no'}"></td>-->
+
+
+<!--<ul>-->
+<!--<li>Start the day</li>-->
+<!--<br/>-->
+<!--<li>Finish H2 workshop1</li>-->
+<!--<br/>-->
+<!--<li>Finish JPA workshop2</li>-->
+<!--<br/>-->
+<!--<li>Create a CRUD project</li>-->
+<!--</ul>-->
+
+<!--<a style="display: block" href="/todo/">-->
+<!--<button type="button">All todos</button>-->
+<!--</a>-->
+<!--<a style="display: block" href="/todo/urgentnotcompleted">Urgent & not completed</a>-->
+<!--<a style="display: block" href="/todo/notcompleted">Not completed</a>-->
+<!--<a style="display: block" href="/todo/completed">Completed </a>-->
+<!--<a style="display: block" href="/todo/add">Add new</a>-->
+<!--<a style="display: block" href="/todo/completed">Completed </a>-->
+
+<!--<a style="display: block" href="/todo/add">Add new</a>-->
+<!--<button class="btn btn-warning">Delete</button>-->

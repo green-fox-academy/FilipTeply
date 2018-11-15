@@ -73,7 +73,7 @@ public class BarTimer6 {
             graphics.fillRect((int) (x + offsetX), (int) y, (int) width, (int) (height - y));
             if (height - y <= 0) {
                 timer2.stop();
-                timer2.stop();
+
             }
 
             timer3.setInitialDelay(2*SIXTY_SECONDs);

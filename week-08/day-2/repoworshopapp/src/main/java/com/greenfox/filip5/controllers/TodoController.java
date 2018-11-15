@@ -70,6 +70,20 @@ public class TodoController {
     }
 
 
+    @GetMapping(value = {"/", "/list"})
+    public String list (@RequestParam(value = "isActive", required = false) String completed, Model model) {
+        if (completed != null && completed.equals("true")) {
+            model.addAttribute("todolist",todoRepository.findAll().stream().filter(x -> true == (x.isDone())).collect(Collectors.toList()));
+            return "todolist";
+        } else  if (completed != null && completed.equals("false")) {
+            model.addAttribute("todolist",todoRepository.findAll().stream().filter(x -> false == (x.isDone())).collect(Collectors.toList()));
+            return "todolist";
+        } else {
+            model.addAttribute("todolist",todoRepository.findAll());
+            return "todolist";
+        }
+    }
+
     //Extend the controller class with delete() method mapping to /{id}/delete
     //The aim is to delete the clicked item
     //To do this the clicked item should be specified in the path, so we will need a uniq @PathVariable, which in our case is the long id of the todo item

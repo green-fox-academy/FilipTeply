@@ -10,6 +10,17 @@ public interface TodoRepository extends CrudRepository<Todo, Long> {
     @Override
     List<Todo> findAll();
 
+    List<Todo> findAllByOrderByIdDesc();
+
+
+//    List<Todo> findAllAndOrderById();
+
 //    @Override
-//    void save();
+//    Iterable<Todo> findAllCompletedIsTrue(Iterable<Long> longs);
+
+
+
+    List<Todo> findAllByCompletedIsTrueOrderByIdDesc();
+
+
 }

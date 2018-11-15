@@ -1,12 +1,13 @@
 package com.greenfox.filip5.controllers;
 
-
 import com.greenfox.filip5.models.Todo;
 import com.greenfox.filip5.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(value = "/todo")
@@ -25,12 +26,14 @@ public class TodoController {
 
     @GetMapping(value = {"/", "/list"})
     public String list(Model model) {
-        model.addAttribute("todos", todoRepository.findAll());
+        model.addAttribute("todos", todoRepository.findAllByOrderByIdDesc());
         return "todolist";
     }
 
+    //findAllByOrderByIdDesc()
+
     @GetMapping("/add")
-    public String addForm(Model model) {
+    public String addForm() {
         return "add";
     }
 
@@ -57,32 +60,36 @@ public class TodoController {
     public String edit(@PathVariable("id") Long id, @RequestParam(value = "Title", required = false)
             String title,
                        @RequestParam(value = "Urgent", required = false, defaultValue = "false") boolean urgent,
-                       @RequestParam(value = "Done", required = false, defaultValue = "false") boolean done) {
+                       @RequestParam(value = "Done", required = false, defaultValue = "false") boolean completed) {
         Todo t = todoRepository.findById(id).get();
         if (title != null) {
             t.setTitle(title);
         }
 
         t.setUrgent(urgent);
-        t.setDone(done);
+        t.setCompleted(completed);
         todoRepository.save(t);
         return "redirect:/todo/";
     }
 
+}
 
-    @GetMapping(value = {"/", "/list"})
-    public String list (@RequestParam(value = "isActive", required = false) String completed, Model model) {
-        if (completed != null && completed.equals("true")) {
-            model.addAttribute("todolist",todoRepository.findAll().stream().filter(x -> true == (x.isDone())).collect(Collectors.toList()));
-            return "todolist";
-        } else  if (completed != null && completed.equals("false")) {
-            model.addAttribute("todolist",todoRepository.findAll().stream().filter(x -> false == (x.isDone())).collect(Collectors.toList()));
-            return "todolist";
-        } else {
-            model.addAttribute("todolist",todoRepository.findAll());
-            return "todolist";
-        }
-    }
+
+//    @GetMapping(value = {"/", "/list"})
+//    public String list (@RequestParam(value = "isActive", required = false) String completed, Model model) {
+//        if (completed != null && completed.equals("true")) {
+//            model.addAttribute("todolist",todoRepository.findAll().stream().filter(x -> true == (x.isCompleted())).collect(Collectors.toList()));
+//            return "todolist";
+//        } else  if (completed != null && completed.equals("false")) {
+//            model.addAttribute("todolist",todoRepository.findAll().stream().filter(x -> false == (x.isCompleted())).collect(Collectors.toList()));
+//            return "todolist";
+//        } else {
+//            model.addAttribute("todolist",todoRepository.findAll());
+//            return "todolist";
+//        }
+
+
+
 
     //Extend the controller class with delete() method mapping to /{id}/delete
     //The aim is to delete the clicked item
@@ -103,8 +110,8 @@ public class TodoController {
 
 //    Extend Listing
 //    Extend the listing method with a request parameter
-// for listing the active todos (active means !isDone) If you write
+// for listing the active todos (active means !isCompleted) If you write
 //    http://localhost:8080/todo/?isActive=true then only those todos
 // which are not done yet should be lsited.
 
-}
+

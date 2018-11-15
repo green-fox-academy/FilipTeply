@@ -1,5 +1,6 @@
 package com.greenfox.filip5.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,26 +15,28 @@ public class Todo {
     String title;
 
     boolean urgent;
-    boolean done;
+
+   // @Column (name="done")
+    boolean completed;
 
 
     public Todo() {
         this.urgent = false;
-        this.done = false;
+        this.completed = false;
     }
 
     public Todo(String title) {
         this.title = title;
         this.urgent = false;
-        this.done = false;
+        this.completed = false;
 
     }
 
-    public Todo(String title, boolean urgent, boolean done) {
+    public Todo(String title, boolean urgent, boolean completed) {
 
         this.title = title;
         this.urgent = urgent;
-        this.done = done;
+        this.completed = completed;
     }
 
     public long getId() {
@@ -56,12 +59,12 @@ public class Todo {
         this.urgent = urgent;
     }
 
-    public boolean isDone() {
-        return done;
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public void setDone(boolean done) {
-        this.done = done;
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 
 
@@ -71,11 +74,11 @@ public class Todo {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", urgent=" + urgent +
-                ", done=" + done +
+                ", completed=" + completed +
                 '}';
     }
 
 }
 
 //    Add a com.greenfox.filip5.models.Todo class with the fields
-//(id: long, title: String, urgent: boolean(default false), done: boolean(default false))
+//(id: long, title: String, urgent: boolean(default false), completed: boolean(default false))

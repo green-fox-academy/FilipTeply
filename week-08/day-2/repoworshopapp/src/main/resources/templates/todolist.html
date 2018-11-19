@@ -18,7 +18,7 @@
 
     <div class="center-block" style="width: 800px">
 
-        <h1 style="margin-top: 100px; margin-bottom: 50px">Todos for Today</h1>
+        <h1 style="margin-top: 100px; margin-bottom: 50px">Todos for this week</h1>
 
         <a href="/todo/" role="button" class="btn btn-primary">All todos</a>
         <a href="/todo/urgentnotcompleted" role="button" class="btn btn-success">Urgent & not
@@ -47,7 +47,6 @@
                         <td><span th:text="${todo.getId()}"></span></td>
                         <td><span th:text="${todo.getTitle()}"></span></td>
 
-
                         <div th:if="${todo.isUrgent()}">
                             <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                         </div>
@@ -64,24 +63,13 @@
                             <td></td>
                         </div>
 
-                        <!--<td><span th:text="${todo.isCompleted()? 'yes' : 'no'}"></span></td>-->
-
-                        <!--<div class="btn-group-vertical" role="group" aria-label="...">-->
-                        <!--...-->
-                        <!--</div>-->
-
-                        <!--class="btn btn-warning"-->
-
-                        <!--glyphicon-trash-->
-
-
                         <td>
                             <form th:action="|/todo/${todo.getId()}/delete|" th:method="post">
-                                <!--<div class="btn-group-vertical" role="group">-->
+
                                 <button>
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </button>
-                                <!--</div>-->
+
                             </form>
                         </td>
                         <td>
@@ -132,3 +120,16 @@
 
 <!--<a style="display: block" href="/todo/add">Add new</a>-->
 <!--<button class="btn btn-warning">Delete</button>-->
+
+<!--<td><span th:text="${todo.isCompleted()? 'yes' : 'no'}"></span></td>-->
+
+<!--<div class="btn-group-vertical" role="group" aria-label="...">-->
+<!--...-->
+<!--</div>-->
+
+<!--class="btn btn-warning"-->
+
+<!--glyphicon-trash-->
+
+<!--<div class="btn-group-vertical" role="group">-->
+<!--</div>-->

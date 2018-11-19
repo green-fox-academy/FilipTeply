@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.stream.Collectors;
+
 
 @Controller
 @RequestMapping(value = "/todo")
@@ -20,69 +22,67 @@ public class TodoController {
         this.todoRepository = todoRepository;
     }
 
-    //Create a new controller called TodoController which maps to /todo
-    //method which maps to / and /list in the controller, which returns
-    // with "This is my first todo" string. Use the @ResponseBody annotation.
-
     @GetMapping(value = {"/", "/list"})
-    public String list(Model model) {
+    public String listAllTodos(Model model) {
         model.addAttribute("todos", todoRepository.findAllByOrderByIdDesc());
         return "todolist";
     }
 
-    //findAllByOrderByIdDesc()
-
     @GetMapping("/add")
-    public String addForm() {
+    public String showAddTodoForm() {
         return "add";
     }
 
     @PostMapping("/add")
-    public String addSubmit(String title) {
+    public String saveNewTodoItem(String title) {
         todoRepository.save(new Todo(title));
         return "redirect:/todo/";
     }
 
     @PostMapping(value = "/{id}/delete")
-    public String delete(@PathVariable("id") Long id) {
+    public String deleteTodoItem(@PathVariable("id") Long id) {
         todoRepository.deleteById(id);
         return "redirect:/todo/";
     }
 
     @GetMapping("/{id}/edit")
-    public String editForm(@PathVariable("id") Long id, Model model) {
+    public String editTodoItem(@PathVariable("id") Long id, Model model) {
         model.addAttribute("todo", todoRepository.findById(id).get());
         System.out.println(todoRepository.findById(id).get().getId());
         return "edit";
     }
 
     @GetMapping(value = "/urgentnotcompleted")
-    public String urgentNotCompletedList(Model model) {
+    public String showUrgentNotCompletedTodos(Model model) {
         model.addAttribute("todos", todoRepository.findAllByUrgentIsTrueAndCompletedIsFalseOrderByIdDesc());
         return "todolist";
     }
 
     @GetMapping(value = "/notcompleted")
-    public String notCompletedList(Model model) {
-        model.addAttribute("todos", todoRepository.findAllByCompletedIsFalseOrderByIdDesc());
+    public String showNotCompletedTodos(Model model) {
+
+        model.addAttribute("todos",
+                todoRepository.findAllByCompletedIsFalseOrderByIdDesc());
+
         return "todolist";
+
     }
 
+
+
+
     @GetMapping(value = "/completed")
-    public String completedList(Model model) {
+    public String showCompletedTodos(Model model) {
         model.addAttribute("todos", todoRepository.findAllByCompletedIsTrueOrderByIdDesc());
         return "todolist";
     }
 
 
-
-
-
     @PostMapping(value = "/{id}/edit")
-    public String edit(@PathVariable("id") Long id, @RequestParam(value = "Title", required = false)
+    public String editTodoItem(@PathVariable("id") Long id, @RequestParam(value = "Title", required = false)
             String title,
-                       @RequestParam(value = "Urgent", required = false, defaultValue = "false") boolean urgent,
-                       @RequestParam(value = "Done", required = false, defaultValue = "false") boolean completed) {
+                               @RequestParam(value = "Urgent", required = false, defaultValue = "false") boolean urgent,
+                               @RequestParam(value = "Done", required = false, defaultValue = "false") boolean completed) {
         Todo t = todoRepository.findById(id).get();
 //        if (title != null) {
         t.setTitle(title);
@@ -95,6 +95,21 @@ public class TodoController {
 
 
 }
+
+
+//    @GetMapping(value = "/notcompleted")
+//    public String showNotCompletedTodos(Model model) {
+//        model.addAttribute("todos",
+//                todoRepository.findAll().stream()
+//                        .filter(t -> t.isCompleted() == false)
+//                        .sorted((t1, t2) -> t1.compareTo(t2))
+//                        .sorted(Collections.reverseOrder())
+//                        .collect(Collectors.toList()));
+//        return "todolist";
+//    }
+
+
+//
 
 
 //    @GetMapping(value = {"/", "/list"})
@@ -110,6 +125,7 @@ public class TodoController {
 //            return "todolist";
 //        }
 
+//findAllByOrderByIdDesc()
 
 //Extend the controller class with delete() method mapping to /{id}/delete
 //The aim is to delete the clicked item
@@ -135,3 +151,6 @@ public class TodoController {
 // which are not done yet should be lsited.
 
 
+//Create a new controller called TodoController which maps to /todo
+//method which maps to / and /list in the controller, which returns
+// with "This is my first todo" string. Use the @ResponseBody annotation.

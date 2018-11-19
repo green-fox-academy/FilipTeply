@@ -1,12 +1,13 @@
 package com.greenfox.filip5.models;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Todo {
+public class Todo implements Comparable {
 
     @Id
     @GeneratedValue
@@ -16,21 +17,20 @@ public class Todo {
 
     boolean urgent;
 
-   // @Column (name="done")
+    //@Column(name="done")
     boolean completed;
 
+    public Todo(String title) {
+        this.title = title;
+        this.urgent = false;
+        this.completed = false;
+    }
 
     public Todo() {
         this.urgent = false;
         this.completed = false;
     }
 
-    public Todo(String title) {
-        this.title = title;
-        this.urgent = false;
-        this.completed = false;
-
-    }
 
     public Todo(String title, boolean urgent, boolean completed) {
 
@@ -76,6 +76,11 @@ public class Todo {
                 ", urgent=" + urgent +
                 ", completed=" + completed +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object t) {
+        return (int) (this.getId() - ((Todo) t).getId());
     }
 
 }

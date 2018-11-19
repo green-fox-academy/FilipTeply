@@ -5,10 +5,12 @@ public class DoublingResponse {
     int received;
     int result;
 
-    public DoublingResponse(int received, int result) {
+    public DoublingResponse(int received) {
         this.received = received;
-        this.result = result;
+        result = 2 * received;
     }
+
+//    public int doubling(int rece)
 
     public int getReceived() {
         return received;

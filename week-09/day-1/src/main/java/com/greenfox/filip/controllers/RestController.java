@@ -1,5 +1,6 @@
 package com.greenfox.filip.controllers;
 
+import com.greenfox.filip.Model.DoublingResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -9,15 +10,27 @@ import java.util.HashMap;
 public class RestController {
 
     @GetMapping("/doubling")
-    public Object doubling(@RequestParam(value = "input") int input) {
-        int result;
-        result = 2*input;
-        HashMap<String, Integer> hashMap1= new HashMap<>();
+    public Object doubling(@RequestParam(value = "input", required = false) Integer input) {
+        Integer result;
+        HashMap<String, Integer> hashMap1 = new HashMap<>();
+        HashMap<String, String> hashMap2 = new HashMap<>();
+        if (input == null) {
 
-        hashMap1.put("received", input);
-        hashMap1.put("result", result);
+            //        HashMap<String, String> hashMap2 = new HashMap<>();
+            hashMap2.put("error", "Please provide an input!");
+            return hashMap2;
+        } else {
+            //DoublingResponse.
+            result = 2 * input;
 
-        return hashMap1;
+            hashMap1.put("received", input);
+            hashMap1.put("result", result);
+            return hashMap1;
+        }
     }
 
+//    public Object error() {
+
+//
+//    }
 }

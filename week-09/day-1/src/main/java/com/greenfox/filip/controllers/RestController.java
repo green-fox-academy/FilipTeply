@@ -1,9 +1,10 @@
 package com.greenfox.filip.controllers;
 
+import com.greenfox.filip.Model.Appenda;
+import com.greenfox.filip.Model.DoUntil;
 import com.greenfox.filip.Model.DoublingResponse;
 import com.greenfox.filip.Model.Greeter;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
@@ -34,6 +35,24 @@ public class RestController {
     public Object greeter(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "title", required = false) String title) {
         return new Greeter(name, title);
     }
+
+    @GetMapping("/appenda/{appendable}")
+    public Object append(@PathVariable("appendable") String appendable) {
+        return new Appenda(appendable);
+    }
+
+    @PostMapping("/dountil/{action}")
+    public Object doUntil(@PathVariable("action") String action, @RequestParam(required = false) Integer until) {
+        return new DoUntil(action, until);
+    }
+
+
+
+
+//    @GetMapping("/dountil/{action}")
+//    public Object doUntil(@PathVariable("action") String action, Integer until) {
+//        return new DoUntil(action, until);
+//    }
 
 
 }

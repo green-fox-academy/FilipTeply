@@ -11,11 +11,11 @@ public class Greeter {
 
     public Greeter(String name, String title) {
 
-
-        if (title == null && name == null) {
-            error = "Please provide a name and title!";
-
-        } else if (name == null) {
+//        if (title == null && name == null) {
+//            error = "Please provide a name and title!";
+//
+//        } else
+        if (name == null) {
             error = "Please provide a name!";
 
         } else if (title == null) {

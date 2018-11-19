@@ -32,9 +32,7 @@ public class RestController {
 
     @GetMapping("/greeter")
     public Object greeter(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "title", required = false) String title) {
-
         return new Greeter(name, title);
-        
     }
 
 

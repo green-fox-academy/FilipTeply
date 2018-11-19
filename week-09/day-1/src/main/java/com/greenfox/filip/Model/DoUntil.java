@@ -9,20 +9,23 @@ public class DoUntil {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String error;
 
+
     public DoUntil(String action, RequestNumber until) {
+
 
         if (until == null) {
             error = "Please provide a number!";
 
         } else if (action.equals("sum")) {
-
-            for (int i = 0; i <= RequestNumber.until; i++) {
+            result = 0;
+            for (int i = 0; i <= until.getUntil(); i++) {
                 result += i;
             }
 
         } else if (action.equals("factor")) {
-            for (int i = 1; i <= RequestNumber.until; i++) {
-                result=1;
+            result = 1;
+            for (int i = 1; i <= until.getUntil(); i++) {
+
                 result = i * result;
             }
         }

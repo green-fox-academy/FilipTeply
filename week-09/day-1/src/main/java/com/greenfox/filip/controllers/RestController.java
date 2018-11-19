@@ -1,9 +1,6 @@
 package com.greenfox.filip.controllers;
 
-import com.greenfox.filip.Model.Appenda;
-import com.greenfox.filip.Model.DoUntil;
-import com.greenfox.filip.Model.DoublingResponse;
-import com.greenfox.filip.Model.Greeter;
+import com.greenfox.filip.Model.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -42,8 +39,11 @@ public class RestController {
     }
 
     @PostMapping("/dountil/{action}")
-    public Object doUntil(@PathVariable("action") String action, @RequestParam(required = false) Integer until) {
+    public Object doUntil(@PathVariable("action") String action, @RequestBody(required = false) RequestNumber until) {
+
         return new DoUntil(action, until);
+
+
     }
 
 

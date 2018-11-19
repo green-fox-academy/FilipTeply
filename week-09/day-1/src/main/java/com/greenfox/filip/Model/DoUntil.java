@@ -2,26 +2,27 @@ package com.greenfox.filip.Model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class DoUntil {
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     Integer result;
-
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     String error;
 
-
-    public DoUntil(String action, Integer until) {
-        result=1;
+    public DoUntil(String action, RequestNumber until) {
 
         if (until == null) {
             error = "Please provide a number!";
+
         } else if (action.equals("sum")) {
 
-            for (int i = -1; i <= until; i++) {
+            for (int i = 0; i <= RequestNumber.until; i++) {
                 result += i;
             }
+
         } else if (action.equals("factor")) {
-            for (int i = 1; i <= until; i++) {
+            for (int i = 1; i <= RequestNumber.until; i++) {
+                result=1;
                 result = i * result;
             }
         }

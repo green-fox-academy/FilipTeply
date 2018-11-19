@@ -10,7 +10,6 @@ public class Appenda {
 
     public Appenda(String appendable) {
         this.appendable = appendable + "a";
-
     }
 
     public String getAppendable() {

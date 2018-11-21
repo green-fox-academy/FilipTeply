@@ -40,8 +40,18 @@ public class TestRestController {
 //                .contentType(MediaType.APPLICATION_JSON)
 //                .content("{\"result\":30,\"received\":15}"))
                 .andExpect(status().isOk());
-
     }
+
+//    @Test
+//    public void doUntilSuccessful() throws Exception {
+//        mockMvc.perform(post("/dountil/sum)
+//                .contentType(MediaType.APPLICATION_JSON)
+//
+//                                .andExpect(status().isOk())
+//                .andExpect(content().contentType(contentType))
+//                .andExpect(jsonPath("$.result", is("success")));
+//    }
+
 
 
 //    @Test

@@ -20,3 +20,5 @@
 5. [Wanderer RPGame](https://github.com/FilipTeply/wanderer-java)
 
 6. [exam 1 - prg-vulpes-basic-exam](https://github.com/FilipTeply/prg-vulpes-basic-exam)
+
+7. [P2P chat] (https://github.com/FilipTeply/p2p-chat.git)
